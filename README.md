@@ -1,68 +1,111 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# project-3
 
-## Available Scripts
+# [project-3](https://polar-ocean-72761.herokuapp.com/)
 
-In the project directory, you can run:
 
-### `npm start`
+[![GitHub License](https://img.shields.io/badge/License-orange.svg)](Develop/License/MIT.md)
+<!-- [![GitHub Test](https://img.shields.io/badge/Test-blue.svg)](#test) -->
+<!-- can put technologies here as shield icons and their versions -->
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Description 
 
-### `npm test`
+Budget Tracker is a full-stack application that allows the user to add and subtract funds onile or offline. 
+Additionally, the application allows the user to visualize a graph of their total spendings in a day over a period of time. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project enabled me to gain a better understadning of looking at pre-existing code and analyzing where the connections
+need to be made in order for it to make it a progressive web applciation.Through this program I learned to work in IndexedDB as well as the use of Manifest, Service Worker, and CacheAPI. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Table of Contents
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* [Description](#Description)
+* [Technologies](#technologies)
+* [Application](#Application)
+* [Demonstration](#demonstration)
+* [Installation](#installation)
+* [Instructions](#instructions)
+* [Acknowledgements](#acknowledgements)
+* [Questions](#questions)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies
 
-### `npm run eject`
+* JavaScript
+* Bootstrap
+* [Web app manifests](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
+* [Service Worker](https://developers.google.com/web/fundamentals/primers/service-workers)
+* [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+* Node.js
+* npm
+* HTML
+* CSS
+* [MongoDB](https://docs.mongodb.com/)
+* [Mongoose](https://mongoosejs.com/)
+* Heroku
+* Express 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Application 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Finished Product](./public/images/image.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Demonstration 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<!-- ![Application Demo](./public/assets/video.gif) -->
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The following installations are needed for this package:
+1. npm init 
+2. npm i  
+3. npm install node
+    
+Once in the correct directory (server.js), run "node server.js"
 
-### Code Splitting
+## Instructions
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+These are instructins & tips for anyone who wants to build this app or a similar app as practice:
 
-### Analyzing the Bundle Size
+* Using MongoDB
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+1. Make sure to start MongoDB in your terminal prior to running the application
 
-### Making a Progressive Web App
+* Using Web app manifests
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Web app manifests are part of a collection of web technologies called progressive web apps (PWAs), which are websites that can be installed to a device’s homescreen without an app store. Unlike regular web apps with simple homescreen links or bookmarks, PWAs can be downloaded in advance and can work offline, as well as use regular Web APIs.
+The web app manifest provides information about a web application in a JSON text file, necessary for the web app to be downloaded and be presented to the user similarly to a native app.
 
-### Advanced Configuration
+1. Create a manifest.webmanifest in a public folder and populate it with information about your images 
+2. Add a link to index.html (<link rel="manifest" href="manifest.webmanifest">)
+3. If you have seed data run the following, npm init > npm run seed > npm start
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+* Using Service Worker
 
-### Deployment
+A service worker (similar to AppCache) is a script that your broswer runs in the background, separate from a web page, and allows for a user to use their application offline. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+1. Create a service-worker.js file in the public folder.
+2. Copy and analyze the code I have in my service-worker.js file
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Using IndexedDB
+
+IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. 
+
+1. Create a db.js file in the public folder
+2. Copy and analyze the code I have in my db.js file 
+
+
+## Acknowledgements
+
+* UW Coding Bootcamp instructional team and classmates
+    * test files already provided
+    * skeleton of html files already provided
+    * htmlRenderer.js already provided
+* [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+
+
+## Questions 
+
+If you have any questions, please contact me on:
+GitHub at [avaarm](https://github.com/avaarm)
+Email at [Armenuhi](mailto:avaarm95@mail.com)
