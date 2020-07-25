@@ -95,6 +95,13 @@ IndexedDB is a low-level API for client-side storage of significant amounts of s
 2. Copy and analyze the code I have in my db.js file 
 
 
+## Team Members
+* Armenuhi Avanesyan
+* Jeffrey Adamo
+* Vinh Mao
+* Tyler McBride
+
+
 ## Acknowledgements
 
 * UW Coding Bootcamp instructional team and classmates
