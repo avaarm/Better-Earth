@@ -5,13 +5,24 @@ import React from "react";
 // import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import CategorySearch from "./components/CategorySearch";
+import NewsCard from "./components/NewsCard";
+import FootprintHistory from "./components/FootprintHistory";
+import ResultCard from "./components/ResultCard";
+import FootprintCard from "./components/FootprintCard";
+
+
 
 function App() {
   return (
 
       <div>
         <Nav />
-          Hellos
+        <CategorySearch />
+        <NewsCard />
+        <FootprintHistory />
+        <ResultCard />
+        <FootprintCard />
+
       </div>
 
   );
