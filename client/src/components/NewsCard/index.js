@@ -5,7 +5,7 @@ import { Row, Col, CardPanel} from 'react-materialize';
 // anything that is materialize react specific has to be imported
 
 
-function CategorySearch() {
+function NewsCard() {
   return (
 <Row>
   <Col
@@ -22,4 +22,4 @@ function CategorySearch() {
   );
 }
 
-export default CategorySearch;
+export default NewsCard;
