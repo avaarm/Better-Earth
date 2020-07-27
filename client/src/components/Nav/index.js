@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Icon, NavItem} from 'react-materialize';
 import M from 'materialize-css';
+import "./style.css";
 
 // anything that is materialize react specific has to be imported
 
@@ -15,7 +16,7 @@ function Nav() {
   menuIcon={<Icon>menu</Icon>}
   options={{
     draggable: true,
-    edge: 'left',
+    edge: 'right', 
     inDuration: 250,
     onCloseEnd: null,
     onCloseStart: null,
