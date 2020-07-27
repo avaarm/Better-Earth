@@ -9,6 +9,7 @@ import NewsCard from "./components/NewsCard";
 import FootprintHistory from "./components/FootprintHistory";
 import ResultCard from "./components/ResultCard";
 import FootprintCard from "./components/FootprintCard";
+import FooterBar from "./components/FooterBar"
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <FootprintHistory />
         <ResultCard />
         <FootprintCard />
+        <FooterBar />
 
       </div>
 
