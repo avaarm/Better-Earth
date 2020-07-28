@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// For categories 
 export default {
   // Gets all books
   getBooks: function() {
@@ -18,3 +19,6 @@ export default {
     return axios.post("/api/books", bookData);
   }
 };
+
+
+// for news results 
