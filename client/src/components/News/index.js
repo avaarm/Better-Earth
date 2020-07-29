@@ -25,12 +25,8 @@ function News() {
         setNewsOne(response.data.articles[0])
         // return title=response.data.articles[0].title
         
-      }
-      )
-      .then(()=> console.log(news))
-        
-      
-      .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log("error is caught"+err));
   }
 
   return (
