@@ -1,6 +1,6 @@
 import axios from "axios";
+// require("dotenv").config();
 
-// For categories 
 export default {
   // Gets all books
   getBooks: function() {
@@ -17,8 +17,18 @@ export default {
   // Saves a book to the database
   saveBook: function(bookData) {
     return axios.post("/api/books", bookData);
+  },
+
+  ////////NEWS API////////////////////
+  getNews: function() {
+    console.log(process.env.NODE_ENV);
+    console.log(process.env.REACT_APP_TEST_ENV);
+    const APIKEY_NEWS = process.env.REACT_APP_APIKEY_NEWS;
+    return axios.get("https://newsapi.org/v2/everything?q=environment&apiKey="+APIKEY_NEWS)
+    
   }
+
+
+  ////////////////////////////////////
 };
 
-
-// for news results 
