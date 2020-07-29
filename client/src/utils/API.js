@@ -1,5 +1,5 @@
 import axios from "axios";
-require("dotenv").config();
+// require("dotenv").config();
 
 export default {
   // Gets all books
@@ -21,10 +21,11 @@ export default {
 
   ////////NEWS API////////////////////
   getNews: function() {
-    apiKeyOTM = process.env.APIKEY_NEWS
-    return axios.get("https://newsapi.org/v2/everything?q=environment&apiKey=46e0195723054e84ab1a9cd0773932ae")
-    .then(response =>
-      console.log(response))
+    console.log(process.env.NODE_ENV);
+    console.log(process.env.REACT_APP_TEST_ENV);
+    const APIKEY_NEWS = process.env.REACT_APP_APIKEY_NEWS;
+    return axios.get("https://newsapi.org/v2/everything?q=environment&apiKey="+APIKEY_NEWS)
+    
   }
 
 

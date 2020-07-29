@@ -6,7 +6,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "dotenv": "^8.2.0",
-    "materialize-css": "^1.0.0-rc.2",
+    "materialize-css": "^1.0.0",
     "mongoose": "^5.9.25",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
