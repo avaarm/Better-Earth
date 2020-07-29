@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, CardPanel } from "react-materialize";
+import { Row, Col, CardPanel, Select } from "react-materialize";
 
 // anything that is materialize react specific has to be imported
 
