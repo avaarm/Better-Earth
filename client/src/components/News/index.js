@@ -5,14 +5,14 @@ import API from "../../utils/API";
 
 function News() {
   const [news, setNews] = useState([]);
-  const [newsOne, setNewsOne] = useState([]);
+  const [newsOne, setNewsOne] = useState({});
 
   useEffect(() => {
     loadNews();
   }, []);
 
   let res=[];
-  let title="";
+//   let title="";
   function loadNews() {
     API.getNews()
       .then((response) => {
@@ -23,7 +23,7 @@ function News() {
         console.log(response.data.articles[0].title);
         setNews(response.data.articles)
         setNewsOne(response.data.articles[0])
-        return title=response.data.articles[0].title
+        // return title=response.data.articles[0].title
         
       }
       )
@@ -37,26 +37,12 @@ function News() {
     <div>
       <Row>
 
-        {/* {news.map((item, index) => (
-            <Col m={6} s={12} l={3}>
-                <NewsCard
-                title={item.title}
-                source={item.source.name}
-                author={item.author}
-                description={item.description}
-                url={item.url}
-                urlToImage={item.urlToImage}
-                publishedAt={item.publishedAt}
-                id={item.index}
-                />
-            </Col>
-        ))}
-    */}
+   
 
         <Col m={6} s={12} l={3}>
           <NewsCard
             title={newsOne.title}
-            source="source"
+            source={news[0] ? news[0].source.name : ""}
             author={newsOne.author}
             description={newsOne.description}
             url={newsOne.url}
@@ -77,6 +63,21 @@ function News() {
             id="1"
           />
         </Col>
+        
+        {news.map((item, index) => (
+            <Col m={6} s={12} l={3}>
+                <NewsCard
+                title={item.title}
+                source={item.source.name}
+                author={item.author}
+                description={item.description}
+                url={item.url}
+                urlToImage={item.urlToImage}
+                publishedAt={item.publishedAt}
+                id={item.index}
+                />
+            </Col>
+        ))}
       </Row>
     </div>
   );
