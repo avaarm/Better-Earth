@@ -1,0 +1,11 @@
+.backColor{
+    text-align: center;
+    color: #F24E1E;
+}
+
+.newsButton {
+    background-color: #F24E1E !important; 
+    color: white !important;
+    float: right;
+   
+}
