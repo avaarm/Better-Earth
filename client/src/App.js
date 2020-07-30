@@ -5,7 +5,7 @@ import React from "react";
 // import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import CategorySearch from "./components/CategorySearch";
-import News from "./components/News";
+import NewsAPI from "./components/NewsAPI";
 import FootprintHistory from "./components/FootprintHistory";
 import ResultCard from "./components/ResultCard";
 import FootprintCard from "./components/FootprintCard";
@@ -19,7 +19,7 @@ function App() {
       <div>
         <Nav />
         <CategorySearch />
-        <News />
+        <NewsAPI />
         <FootprintHistory />
         <ResultCard />
         <FootprintCard />
