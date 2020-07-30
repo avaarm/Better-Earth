@@ -1,0 +1,10 @@
+/* .card-image{
+    height: 100px;
+    overflow: hidden;
+} */
+
+.card-title{
+    font-size: 12px !important;
+    margin-bottom: 0px;
+    padding-bottom: 10px !important;
+}
