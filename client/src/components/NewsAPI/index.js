@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-materialize";
 import NewsCard from "../NewsCard";
 import API from "../../utils/API";
+import { STATES } from "mongoose";
 
 function News() {
   const [news, setNews] = useState([]);
   const [newsOne, setNewsOne] = useState({});
+  // toggling between 5 vs all the results 
+  const [seeAll, toggleSeeAll] = useState(false)
 
   useEffect(() => {
     loadNews();
@@ -27,6 +30,11 @@ function News() {
         
       })
       .catch((err) => console.log("error is caught"+err));
+  }
+
+
+  function handleToggleSeeAll(){
+    toggleSeeAll(!seeAll)
   }
 
   return (
@@ -59,8 +67,24 @@ function News() {
             id="1"
           />
         </Col>
+        { !seeAll ?
         
-        {news.map((item, index) => (
+        news.slice(0,3).map((item, index) => (
+            <Col m={6} s={12} l={3}>
+                <NewsCard
+                title={item.title}
+                source={item.source.name}
+                author={item.author}
+                description={item.description}
+                url={item.url}
+                urlToImage={item.urlToImage}
+                publishedAt={item.publishedAt}
+                id={item.index}
+                />
+            </Col>
+          
+        )):
+        news.map((item, index) => (
             <Col m={6} s={12} l={3}>
                 <NewsCard
                 title={item.title}
@@ -75,6 +99,8 @@ function News() {
             </Col>
         ))}
       </Row>
+{/* can make a react router link here  */}
+      {!seeAll ? <button onClick={handleToggleSeeAll}> See More</button> : <button onClick={handleToggleSeeAll}>See Less</button>}
     </div>
   );
 }
