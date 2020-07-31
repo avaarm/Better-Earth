@@ -57,10 +57,13 @@ function News() {
       </Row>
 
       <Row>
-        {!seeAll
-          ? news
-              .slice(0, 4)
-              .map((item, index) => (
+        <Col
+          m={6}
+          s={12}>
+
+          {!seeAll
+            ? 
+              news.slice(0, 2).map((item, index) => (
                 <NewsCard
                   title={item.title}
                   source={item.source.name}
@@ -72,20 +75,55 @@ function News() {
                   id={item.index}
                 />
               ))
-          : news
-              .slice(4, 8)
-              .map((item, index) => (
-              <NewsCard
-                title={item.title}
-                source={item.source.name}
-                author={item.author}
-                description={item.description}
-                url={item.url}
-                urlToImage={item.urlToImage}
-                publishedAt={item.publishedAt}
-                id={item.index}
-              />
+            : 
+            news.slice(4, 6).map((item, index) => (
+                <NewsCard
+                  title={item.title}
+                  source={item.source.name}
+                  author={item.author}
+                  description={item.description}
+                  url={item.url}
+                  urlToImage={item.urlToImage}
+                  publishedAt={item.publishedAt}
+                  id={item.index}
+                />
             ))}
+        </Col>
+      </Row>
+      <Row>
+        <Col
+          m={6}
+          s={12}
+          l={6}>
+
+          {!seeAll
+            ? 
+              news.slice(2, 4).map((item, index) => (
+                <NewsCard
+                  title={item.title}
+                  source={item.source.name}
+                  author={item.author}
+                  description={item.description}
+                  url={item.url}
+                  urlToImage={item.urlToImage}
+                  publishedAt={item.publishedAt}
+                  id={item.index}
+                />
+              ))
+            : 
+            news.slice(6, 8).map((item, index) => (
+                <NewsCard
+                  title={item.title}
+                  source={item.source.name}
+                  author={item.author}
+                  description={item.description}
+                  url={item.url}
+                  urlToImage={item.urlToImage}
+                  publishedAt={item.publishedAt}
+                  id={item.index}
+                />
+            ))}
+        </Col>
       </Row>
 
     </div>

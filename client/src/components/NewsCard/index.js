@@ -1,10 +1,10 @@
 import React from "react";
-import { Row, Col, Card, Icon, CardTitle} from 'react-materialize';
-import "./style.css"
-
+import { Row, Col, Card, Icon, CardTitle } from "react-materialize";
+import "./style.css";
 
 // anything that is materialize react specific has to be imported
-    {/* <Row>
+{
+  /* <Row>
   <Col
     m={6}
     s={12}
@@ -21,12 +21,13 @@ import "./style.css"
       {props.description}
     </Card>
   </Col>
-</Row> */}
+</Row> */
+}
 
 function NewsCard(props) {
   return (
-    <div className="col s12 m6 l4">
-      <div className="card small">
+      <div className="col s12 m6 l6">
+        <div className="card small">
           <div className="card-image">
             <img src={props.urlToImage} />
             <span className="card-title">{props.title}</span>
@@ -38,7 +39,7 @@ function NewsCard(props) {
             <a href={props.url}>{props.source}</a>
           </div>
         </div>
-    </div>        
+      </div>
   );
 }
 
