@@ -9,3 +9,23 @@
     float: right;
    
 }
+
+.card-title {
+    font-weight: bold !important;
+    padding: 0px 8px 5px !important;
+    float: top;
+    font-size: 15px !important;
+    
+}
+
+.card-content{
+    padding: 12px !important;
+}
+
+.card-image{
+    height: 150px !important;
+}
+
+.card-action{
+    padding: 8px 24px !important;
+}
