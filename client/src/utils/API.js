@@ -1,8 +1,16 @@
 import axios from "axios";
-// require("dotenv").config();
-
 
 export default {
+
+////////NEWS API////////////////////
+getNews: function() {
+  const APIKEY_NEWS = process.env.REACT_APP_APIKEY_NEWS;
+  console.log("https://newsapi.org/v2/everything?q=environment&apiKey="+APIKEY_NEWS)
+  return axios.get("https://newsapi.org/v2/everything?q=environment&apiKey="+APIKEY_NEWS)
+}
+////////////////////////////////////
+
+////////BOILERPLATE/////////////////
 //   // Gets all books
 //   getBooks: function() {
 //     return axios.get("/api/books");
@@ -19,18 +27,7 @@ export default {
 //   saveBook: function(bookData) {
 //     return axios.post("/api/books", bookData);
 //   },
-
-  ////////NEWS API////////////////////
-  getNews: function() {
-    console.log(process.env.NODE_ENV);
-    console.log(process.env.REACT_APP_APIKEY_NEWS);
-    const APIKEY_NEWS = process.env.REACT_APP_APIKEY_NEWS;
-    console.log("https://newsapi.org/v2/everything?q=environment&apiKey="+APIKEY_NEWS)
-    return axios.get("https://newsapi.org/v2/everything?q=environment&apiKey="+APIKEY_NEWS)
-    
-  }
-
-  ////////////////////////////////////
+////////////////////////////////////
 };
 
 
