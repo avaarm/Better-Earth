@@ -7,6 +7,7 @@ import "./style.css";
 
 function News() {
   const [news, setNews] = useState([]);
+
   // toggling between 5 vs all the results
   const [seeAll, toggleSeeAll] = useState(false);
 
@@ -34,6 +35,7 @@ function News() {
         <h3 className="backColor">Environmental News</h3>
       </div>
       <Row>
+
         <Col  >
           {/* can make a react router link here  */}
           {
