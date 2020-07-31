@@ -10,7 +10,7 @@ function Nav() {
   return (
  <Navbar
   alignLinks="right"
-  brand={<a className="brand-logo blue-text text-darken-2" href="#">Project 3</a>}
+  brand={<a className="brand-logo blue" href="#">Better Earth</a>}
   centerChildren
   id="mobile-nav"
   menuIcon={<Icon>menu</Icon>}
