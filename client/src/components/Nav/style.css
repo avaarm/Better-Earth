@@ -8,3 +8,13 @@
     left: 1;
     right: 0; 
 }
+
+Nav {
+    /* background-image: url("waves.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top; */
+    background: rgba(255,255,255,0.9);
+
+
+}
