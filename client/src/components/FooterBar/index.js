@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer } from "react-materialize";
+import { Footer, Button } from "react-materialize";
 import "./style.css";
 
 function FooterBar() {
@@ -7,13 +7,36 @@ function FooterBar() {
         <div>
             <Footer
                 className="blue accent-2 footer"
-                copyrights="2020 All Rights Reserved"
-                links={<ul><li>
-                    <a className="grey-text text-lighten-3 hoverable" href="#!">Name 1</a></li><li>
-                    <a className="grey-text text-lighten-3 hoverable" href="#!">Name 2</a></li><li>
-                    <a className="grey-text text-lighten-3 hoverable" href="#!">Name 3</a></li><li>
-                    <a className="grey-text text-lighten-3 hoverable" href="#!">Name 4</a></li></ul>}
-                // moreLinks={<a className="grey-text text-lighten-4 right" href="#!">More Links</a>}
+                copyrights="&copy; 2020 All Rights Reserved"
+                links={<ul>
+                    <li>
+                        <Button
+                            node="button"
+                            style={{
+                                marginLeft: "50px"
+                            }}
+                            waves="light"
+                        >
+                            Login
+                        </Button>
+                    </li>
+                    <li>
+                        <Button
+                            node="button"
+                            style={{
+                                marginLeft: "50px",
+                                marginTop: "10px"
+                            }}
+                            waves="light"
+                        >
+                            Register
+                        </Button>
+                    </li>
+                    </ul>}
+                moreLinks={<a href="http://www.google.com"><img 
+                    class="circle responsive-img" 
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Neil_Patrick_Harris_%289446191273%29.jpg/440px-Neil_Patrick_Harris_%289446191273%29.jpg"
+                    /></a>}
             >
                 <h5 className="white-text">
                     Like our app?
