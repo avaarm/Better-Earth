@@ -1,5 +1,6 @@
 import React from "react";
-import { Footer, Toast } from "react-materialize";
+import { Footer } from "react-materialize";
+import "./style.css";
 
 function FooterBar() {
     return (
@@ -8,10 +9,10 @@ function FooterBar() {
                 className="blue accent-2 footer"
                 copyrights="2020 All Rights Reserved"
                 links={<ul><li>
-                    <a className="grey-text text-lighten-3" href="#!">Name 1</a></li><li>
-                    <a className="grey-text text-lighten-3" href="#!">Name 2</a></li><li>
-                    <a className="grey-text text-lighten-3" href="#!">Name 3</a></li><li>
-                    <a className="grey-text text-lighten-3" href="#!">Name 4</a></li></ul>}
+                    <a className="grey-text text-lighten-3 hoverable" href="#!">Name 1</a></li><li>
+                    <a className="grey-text text-lighten-3 hoverable" href="#!">Name 2</a></li><li>
+                    <a className="grey-text text-lighten-3 hoverable" href="#!">Name 3</a></li><li>
+                    <a className="grey-text text-lighten-3 hoverable" href="#!">Name 4</a></li></ul>}
                 // moreLinks={<a className="grey-text text-lighten-4 right" href="#!">More Links</a>}
             >
                 <h5 className="white-text">
