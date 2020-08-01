@@ -3,10 +3,12 @@ import { Navbar, Icon, NavItem } from "react-materialize";
 import M from "materialize-css";
 import "./style.css";
 import waves from "./waves.svg"
+import {Link, useLocation} from "react-router-dom";
 
 // anything that is materialize react specific has to be imported
 
 function Nav(props) {
+  const location = useLocation();
   return (
     <div>
       <Navbar
@@ -32,19 +34,11 @@ function Nav(props) {
           preventScrolling: true,
         }}
       >
-        <NavItem href="">Home</NavItem>
-      <NavItem href="#NewsCard"
-          onClick={() => props.handlePageChange("NewsCard")}
-          className={props.currentPage === "NewsCard" ? "nav-link active" : "nav-link"}>News</NavItem>
-        <NavItem href="#FootprintCard"
-          onClick={() => props.handlePageChange("FootprintCard")}
-          className={props.currentPage === "FootprintCard" ? "nav-link active" : "nav-link"}>My Footprint</NavItem>
-        <NavItem href="#about"
-          onClick={() => props.handlePageChange("About")}
-          className={props.currentPage === "About" ? "nav-link active" : "nav-link"}>About Us</NavItem>
-        <NavItem href="#Signup"
-          onClick={() => props.handlePageChange("Signup")}
-          className={props.currentPage === "Signup" ? "nav-link active" : "nav-link"}>Login/Signup</NavItem>
+       <NavItem href="/">Home</NavItem>
+       <NavItem href="/footprintCard">MyFootprint</NavItem>
+       <NavItem href="/news">News</NavItem>
+       <NavItem href="/about">About</NavItem>
+
       </Navbar> 
       <div>
       <img src={waves} />

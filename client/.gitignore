@@ -10,7 +10,7 @@ ReactREADME.md
 .pnp.js
 
 # production
-/client/build
+# /build
 
 /client/node_modules
 # testing
