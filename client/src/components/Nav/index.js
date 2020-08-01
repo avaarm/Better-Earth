@@ -6,7 +6,7 @@ import waves from "./waves.svg"
 
 // anything that is materialize react specific has to be imported
 
-function Nav() {
+function Nav(props) {
   return (
     <div>
       <Navbar
@@ -33,9 +33,19 @@ function Nav() {
         }}
       >
         <NavItem href="">Home</NavItem>
-        <NavItem href="components.html">About Us</NavItem>
-        <NavItem href="components.html">News</NavItem>
-      </Navbar>
+      <NavItem href="#NewsCard"
+          onClick={() => props.handlePageChange("NewsCard")}
+          className={props.currentPage === "NewsCard" ? "nav-link active" : "nav-link"}>News</NavItem>
+        <NavItem href="#FootprintCard"
+          onClick={() => props.handlePageChange("FootprintCard")}
+          className={props.currentPage === "FootprintCard" ? "nav-link active" : "nav-link"}>My Footprint</NavItem>
+        <NavItem href="#about"
+          onClick={() => props.handlePageChange("About")}
+          className={props.currentPage === "About" ? "nav-link active" : "nav-link"}>About Us</NavItem>
+        <NavItem href="#Signup"
+          onClick={() => props.handlePageChange("Signup")}
+          className={props.currentPage === "Signup" ? "nav-link active" : "nav-link"}>Login/Signup</NavItem>
+      </Navbar> 
       <div>
       <img src={waves} />
       </div>
