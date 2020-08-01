@@ -9,12 +9,14 @@ ReactREADME.md
 /.pnp
 .pnp.js
 
+# production
+/client/build
+
 /client/node_modules
 # testing
 /coverage
 
-# production
-/build
+
 
 # misc
 .DS_Store
