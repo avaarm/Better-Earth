@@ -1,32 +1,35 @@
 import React from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import Books from "./pages/Books";
-// import Detail from "./pages/Detail";
-// import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
-import CategorySearch from "./components/CategorySearch";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MainContainer from "./pages/MainContainer";
 import NewsAPI from "./components/NewsAPI";
-import FootprintHistory from "./components/FootprintHistory";
-import ResultCard from "./components/ResultCard";
+// import About from "./pages/About";
+// import Signup from "./components/Signup";
+import Nav from "./components/Nav";
+import About from "./components/About";
 import FootprintCard from "./components/FootprintCard";
-import FooterBar from "./components/FooterBar"
-
-
 
 function App() {
   return (
-
+    <Router>
       <div>
-        <Nav />
-        <CategorySearch />
-        <NewsAPI />
-        <FootprintHistory />
-        <ResultCard />
-        <FootprintCard />
-        <FooterBar />
+        <Route exact path="/" component={MainContainer} />
+        <Route exact path="/news">
+          <Nav />
+          <NewsAPI />
+        </Route>
+        <Route exact path="/about">
+          <Nav />
+          <About />
+        </Route>
 
+        <Route exact path="/footprintCard">
+          <Nav />
+          <FootprintCard />
+        </Route>
+        {/* <Route exact path="/about" component={About} /> */}
+        {/* <Route path="/signup" component={Signup} /> */}
       </div>
-
+    </Router>
   );
 }
 
