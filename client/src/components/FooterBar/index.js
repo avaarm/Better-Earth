@@ -6,14 +6,16 @@ function FooterBar() {
     return (
         <div>
             <Footer
-                className="blue accent-2 footer"
+                className="footerCard accent-2 footer"
                 copyrights="&copy; 2020 All Rights Reserved"
                 links={<ul>
                     <li>
                         <Button
                             node="button"
+                            class= "buttonCard"
                             style={{
-                                marginLeft: "50px"
+                                marginLeft: "50px",
+                                color: "#fccf43"
                             }}
                             waves="light"
                         >
@@ -25,7 +27,8 @@ function FooterBar() {
                             node="button"
                             style={{
                                 marginLeft: "50px",
-                                marginTop: "10px"
+                                marginTop: "10px",
+                                color: "#fccf43"
                             }}
                             waves="light"
                         >
