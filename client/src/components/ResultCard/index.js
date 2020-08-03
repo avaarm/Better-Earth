@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, CardPanel } from "react-materialize";
+import "./style.css";
 
 // anything that is materialize react specific has to be imported
 
@@ -7,7 +8,7 @@ function ResultCard() {
   return (
     <Row>
       <Col m={6} s={12}>
-        <CardPanel className="teal">
+        <CardPanel className="orangeCard">
           <span className="white-text">
             <Row>
               <div className="card">
