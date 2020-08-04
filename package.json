@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "proxy": "http://localhost:3001",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || env-cmd -f .env.development npm run start:dev",
     "start:prod": "node server.js",
@@ -22,11 +23,16 @@
   },
   "dependencies": {
     "axios": "^0.18.1",
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^3.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.16.3",
+    "express-session": "^1.17.1",
     "if-env": "^1.0.4",
     "materialize-css": "^1.0.0",
     "mongoose": "^5.3.16",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "react-materialize": "^3.9.2"
   }
 }
