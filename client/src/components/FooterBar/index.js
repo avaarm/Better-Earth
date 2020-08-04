@@ -34,7 +34,7 @@ function FooterBar() {
                     </li>
                     </ul>}
                 moreLinks={<a href="http://www.google.com"><img 
-                    class="circle responsive-img" 
+                    className="circle responsive-img" 
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Neil_Patrick_Harris_%289446191273%29.jpg/440px-Neil_Patrick_Harris_%289446191273%29.jpg"
                     /></a>}
             >

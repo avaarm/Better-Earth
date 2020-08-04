@@ -17,7 +17,7 @@ function FootprintCard(props) {
             className="card-panel green lighten-2 center-align footprint hoverable"
             closeIcon={<Icon>close</Icon>}
             header={<CardTitle image="https://cdn.cnn.com/cnnnext/dam/assets/200630030038-mt-rainier-file-exlarge-169.jpg" reveal waves="light"/>}
-            reveal={<p class="flow-text">Carbon footprint information will be populated here.</p>}
+            reveal={<p className="flow-text">Carbon footprint information will be populated here.</p>}
             revealIcon={<Icon>more_vert</Icon>}
             title="Your carbon footprint information - click me!"
           >

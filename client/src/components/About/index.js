@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, CardPanel } from "react-materialize";
+import greta from "./greta.jpg"
 
 // anything that is materialize react specific has to be imported
 
@@ -12,7 +13,7 @@ function About() {
             <Row>
               <div className="card">
                 <div className="card-image waves-effect waves-block waves-light">
-                  <img className="activator" src="images/office.jpg" />
+                  <img src={greta} alt="about" className="activator"  />
                 </div>
                 <div className="card-content">
                   <span className="card-title activator grey-text text-darken-4">
