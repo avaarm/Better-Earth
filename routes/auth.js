@@ -14,7 +14,10 @@ router.post("/register_login", (req, res, next) => {
             if (err) {
                 return res.status(400).json({ errors: err });
             }
-            return res.status(200).json({ success: `logged in ${user.id}` });
+            return (
+                res.status(200).json({ success: `logged in ${user.id}` }).then(()=>console.log(`${user.id}`))
+            
+            );
         });
     })(req, res, next);
 });

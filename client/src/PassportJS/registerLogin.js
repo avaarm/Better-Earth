@@ -18,7 +18,7 @@ function RegisterLogin() {
     axios
       .post("/api/auth/register_login", userData)
       .then((res) => {
-        console.log(res.data);
+        console.log(res);
         alert("submit includes: " + userData.email + " " + userData.password);
       })
       .catch((err) => {
