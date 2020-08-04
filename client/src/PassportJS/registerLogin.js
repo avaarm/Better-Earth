@@ -55,6 +55,7 @@ function RegisterLogin() {
                 type="email"
                 className="validate"
                 onChange={(e) => {
+                  console.log(email)
                   setEmail(e.target.value);
                 }}
               />
@@ -67,6 +68,7 @@ function RegisterLogin() {
                 type="password" 
                 className="validate"
                 onChange={(e) => {
+                  console.log(password)
                     setPassword(e.target.value);
                   }} />
               <label for="password">Password</label>
