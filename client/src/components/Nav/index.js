@@ -13,39 +13,36 @@ function Nav(props) {
   return (
     <div>
       <Navbar
-
-        alignLinks="right"
-        brand={
-          <a className="brand-logo " href="#">
-            Better Earth
-          </a>
-        }
-        centerChildren
-        id="mobile-nav"
-        menuIcon={<Icon>menu</Icon>}
-        options={{
-          draggable: true,
-          edge: "right",
-          inDuration: 250,
-          onCloseEnd: null,
-          onCloseStart: null,
-          onOpenEnd: null,
-          onOpenStart: null,
-          outDuration: 200,
-          preventScrolling: true,
-        }}
-      >
-       <NavItem href="/">Home</NavItem>
-       <NavItem href="/footprintCard">MyFootprint</NavItem>
-       <NavItem href="/news">News</NavItem>
-       <NavItem href="/about">About</NavItem>
-       <NavItem >
-         <RegisterLogin />
-        </NavItem>
+          alignLinks="right"
+          brand={
+            <a className="brand-logo " href="/">
+              Better Earth
+            </a>
+          }
+          centerChildren
+          id="mobile-nav"
+          menuIcon={<Icon>menu</Icon>}
+          options={{
+            draggable: true,
+            edge: "right",
+            inDuration: 250,
+            onCloseEnd: null,
+            onCloseStart: null,
+            onOpenEnd: null,
+            onOpenStart: null,
+            outDuration: 200,
+            preventScrolling: true,
+          }}
+        >
+        <NavItem href="/">Home</NavItem>
+        <NavItem href="/footprintCard">MyFootprint</NavItem>
+        <NavItem href="/news">News</NavItem>
+        <NavItem href="/about">About</NavItem>
+        <NavItem href="/login">Login</NavItem>
 
       </Navbar> 
       <div>
-      <img src={waves} />
+        <img src={waves} />
       </div>
       
     </div>

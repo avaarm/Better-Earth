@@ -1,7 +1,17 @@
 import React, { useState } from "react";
+import { Modal, Button, Icon } from "react-materialize";
 import axios from "axios";
 // import DelegatedAuthList from "../DelegatedAuthList";
 
+// import {
+//     PaddedContainer,
+//     EmailSymbol,
+//     PasswordSymbol,
+//     ResponsiveHeader4,
+//     MutedSpan,
+//     VerticalCenterWrapper,
+//     SubmitButtom
+// } from "./styles";
 
 function RegisterLogin() {
   const [email, setEmail] = useState("");
@@ -27,11 +37,13 @@ function RegisterLogin() {
       });
   };
 
+  const trigger = <Button>Join the Movement!</Button>;
+
   return (
-    <div className="container">
+    <Modal trigger={trigger}>
       <div className="row">
-        <div className="col s12 center">
-          <h3>Begin your Better Earth lifestyle!</h3>
+        <div className="col s12">
+          <h3>Let's begin your Better Earth lifestyle!</h3>
         </div>
       </div>
       <div className="row">
@@ -64,20 +76,20 @@ function RegisterLogin() {
             </div>
           </div>
           <div className="row">
-            <div className="col s12 center">
+            <div className="col s4">
               <button
                 className="btn waves-effect waves-light"
                 type="submit"
                 name="action"
               >
-                Login
-                <i className="material-icons prefix">send</i>
+                Submit
+                <i className="material-icons right">send</i>
               </button>
             </div>
           </div>
         </form>
       </div>
-    </div>
+    </Modal>
   );
 }
 
