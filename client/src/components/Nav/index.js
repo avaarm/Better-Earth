@@ -4,6 +4,7 @@ import M from "materialize-css";
 import "./style.css";
 import waves from "./waves.svg"
 import {Link, useLocation} from "react-router-dom";
+import RegisterLogin from "../../PassportJS/registerLogin.js"
 
 // anything that is materialize react specific has to be imported
 
@@ -38,6 +39,9 @@ function Nav(props) {
        <NavItem href="/footprintCard">MyFootprint</NavItem>
        <NavItem href="/news">News</NavItem>
        <NavItem href="/about">About</NavItem>
+       <NavItem >
+         <RegisterLogin />
+        </NavItem>
 
       </Navbar> 
       <div>
