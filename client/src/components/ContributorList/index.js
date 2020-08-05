@@ -5,7 +5,7 @@ import "./style.css";
 function ContributorList() {
     return (
         <div>
-            <Col s={12} m={12} l={12}>
+            <Col s={12} m={6} l={12}>
               <ul>
                 <li>
                   <a href="https://github.com/avaarm">
