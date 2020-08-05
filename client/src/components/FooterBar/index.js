@@ -5,6 +5,7 @@ import Wave3 from "./wave3.svg"
 
 function FooterBar() {
     return (
+
       <div> 
            <div>
             <img src={Wave3} />
@@ -17,7 +18,7 @@ function FooterBar() {
               <li>
                 <Button
                   node="button"
-                  class="buttonCard"
+                  className="buttonCard"
                   style={{
                     marginLeft: "50px",
                     color: "#fccf43",
@@ -45,7 +46,7 @@ function FooterBar() {
           moreLinks={
             <a href="http://www.google.com">
               <img
-                class="circle responsive-img"
+                className="circle responsive-img"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Neil_Patrick_Harris_%289446191273%29.jpg/440px-Neil_Patrick_Harris_%289446191273%29.jpg"
               />
             </a>
@@ -59,6 +60,7 @@ function FooterBar() {
         
         </Footer>
       </div>
+
     );
 }
 
