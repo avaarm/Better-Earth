@@ -10,6 +10,7 @@ function CategorySearch() {
       <Col m={6} s={12}>
         <CardPanel className="outerCard">
           <span className="white-text">
+            <p> Looking for a sustainable alterantive to everyday products? Search below for our recommendations...</p>
             <Row className="innerRow">
               <Col m={6} s={12} l={50}>                    <Select
                       id="Select-9"
