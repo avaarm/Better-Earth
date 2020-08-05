@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactproducts"
+  process.env.MONGODB_URI || "mongodb://localhost/goodearth"
 );
 
 const productSeed = [
@@ -99,7 +99,7 @@ const productSeed = [
   }
 ];
 
-db.Product.remove({})
+db.Product.deleteMany({})
   .then(() => db.Product.collection.insertMany(productSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");

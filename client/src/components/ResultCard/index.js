@@ -8,11 +8,12 @@ function ResultCard(props) {
   return (
     <Row>
       <Col m={10} s={12}>
+        
         <CardPanel className="orangeCard">
-          <p> Your Sustainable Product</p>
+          <p className="center"> Your Sustainable Product Here</p>
+          
           <span className="white-text">
-
-
+<div></div>
           </span>
         </CardPanel>
       </Col>
