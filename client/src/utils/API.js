@@ -17,7 +17,6 @@ getNews: function() {
 //   return axios.get("")
 // }
 
-
 };
 
 
