@@ -2,27 +2,6 @@ import React from "react";
 import { Row, Col, Card, Icon, CardTitle } from "react-materialize";
 import "./style.css";
 
-// anything that is materialize react specific has to be imported
-{
-  /* <Row>
-  <Col
-    m={6}
-    s={12}
-    l={3}
-  >
-    <Card
-      actions={[
-        <a key={props.id} href={props.url}>{props.source}</a>
-      ]}
-      closeIcon={<Icon>close</Icon>}
-      header={<CardTitle image={props.urlToImage}>{props.title}</CardTitle>}
-      revealIcon={<Icon>more_vert</Icon>}
-    >
-      {props.description}
-    </Card>
-  </Col>
-</Row> */
-}
 
 function NewsCard(props) {
   return (

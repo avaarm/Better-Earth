@@ -26,8 +26,6 @@ function App() {
           <Nav />
           <FootprintCard />
         </Route>
-        {/* <Route exact path="/about" component={About} /> */}
-        {/* <Route path="/signup" component={Signup} /> */}
       </div>
     </Router>
   );

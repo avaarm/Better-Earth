@@ -15,10 +15,10 @@ function MainContainer() {
 
       <div>
         <Nav />
-        <CategorySearch />
-        <NewsAPI />
-        <FootprintHistory />
+        <CategorySearch /> 
         <ResultCard />
+        <NewsAPI />
+        {/* <FootprintHistory /> */}
         <FootprintCard />
         <FooterBar />
 

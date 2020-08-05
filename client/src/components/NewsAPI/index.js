@@ -13,6 +13,12 @@ function News() {
 
   useEffect(() => {
     loadNews();
+    // API.coolClimate().then(response => {
+    //   // response.json(response.data);
+    //   console.log(response.data)
+    // }).catch(err => {
+    //   console.log(err);
+    // })
   }, []);
 
   function loadNews() {
