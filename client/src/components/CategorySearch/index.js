@@ -11,7 +11,7 @@ function CategorySearch() {
         <CardPanel className="outerCard">
           <span className="white-text">
             <Row className="innerRow">
-              <Col m={6} s={12}>                    <Select
+              <Col m={6} s={12} l={50}>                    <Select
                       id="Select-9"
                       multiple
                       options={{

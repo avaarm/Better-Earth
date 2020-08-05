@@ -4,6 +4,7 @@ import MainContainer from "./pages/MainContainer";
 import NewsAPI from "./components/NewsAPI";
 // import About from "./pages/About";
 // import Signup from "./components/Signup";
+import RegisterLogin from "./PassportJS/registerLogin"
 import Nav from "./components/Nav";
 import About from "./components/About";
 import FootprintCard from "./components/FootprintCard";
@@ -26,8 +27,11 @@ function App() {
           <Nav />
           <FootprintCard />
         </Route>
-        {/* <Route exact path="/about" component={About} /> */}
-        {/* <Route path="/signup" component={Signup} /> */}
+        <Route exact path="/login">
+          <Nav />
+          <RegisterLogin />
+        </Route>
+
       </div>
     </Router>
   );
