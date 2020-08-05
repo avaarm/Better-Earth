@@ -20,6 +20,13 @@ function FootprintCard(props) {
             reveal={<p className="flow-text">Carbon footprint information will be populated here.</p>}
             revealIcon={<Icon>more_vert</Icon>}
             title="Your carbon footprint information - click me!"
+            reveal={<form>
+              <label>
+                Zip Code:
+                <input type="text" name="name" />
+              </label>
+              
+            </form>}
           >
           {/* <p>
             <a href="#">
