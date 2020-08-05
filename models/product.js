@@ -7,7 +7,8 @@ const ProductSchema = new mongoose.Schema({
   },
   title: {
     type: String,
-    required: true
+    // required: false,
+
   },
   // url string for thumbnail image
   thumbnail: {
@@ -18,7 +19,7 @@ const ProductSchema = new mongoose.Schema({
   href: {
     type: String,
     default: "",
-    unique: true
+    unique: false
   },
   summary: {
     type: String,

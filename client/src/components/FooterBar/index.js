@@ -14,7 +14,9 @@ function FooterBar() {
         <Footer
           className="footerCard accent-2 footer"
           copyrights="&copy; 2020 All Rights Reserved"
+
           links={<ContributorList />}
+
         >
           <h5 className="white-text">Like our app?</h5>
           <p className="grey-text text-lighten-4">
