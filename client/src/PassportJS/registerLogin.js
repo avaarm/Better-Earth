@@ -23,12 +23,6 @@ function RegisterLogin() {
           if(res.status === 200){
           console.log("successful login");
           setLoggedIn(true);
-          console.log(loggedIn);
-          return (
-              <Route exact path="./footprintCard">
-                <Redirect to={{pathname: "/"}} />
-              </Route>
-          )
         }
         }
       )
@@ -36,15 +30,12 @@ function RegisterLogin() {
         console.log(err);
         console.log(err.response);
         setLoggedIn(false);
-        console.log(loggedIn);
         alert("Email and/or Password are not correct. Please try again.")
       });
   };
 
   return (
     <div>
-
-
     {loggedIn ? (
       <Route>
        <Redirect to={{pathname: "/"}} />
