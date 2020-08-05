@@ -31,8 +31,7 @@ function App() {
           <Nav />
           <RegisterLogin />
         </Route>
-        {/* <Route exact path="/about" component={About} /> */}
-        {/* <Route path="/signup" component={Signup} /> */}
+
       </div>
     </Router>
   );

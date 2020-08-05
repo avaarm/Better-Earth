@@ -11,10 +11,10 @@ function MainContainer() {
   return (
       <div>
         <Nav />
-        <CategorySearch />
-        <NewsAPI />
-        <FootprintHistory />
+        <CategorySearch /> 
         <ResultCard />
+        <NewsAPI />
+        {/* <FootprintHistory /> */}
         <FootprintCard />
         <FooterBar />
       </div>

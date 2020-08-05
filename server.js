@@ -1,3 +1,5 @@
+const axios = require("axios")
+
 const express = require("express");
 const session = require("express-session")
 const MongoStore = require("connect-mongo")(session)
@@ -16,6 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
 // Add routes, both API and view
 // app.use(routes);
 
@@ -43,7 +46,9 @@ app.use("/api/auth", auth);
 app.get("/", (req, res) => res.send("Howdy; auth res.send"));
 
 
+
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+
