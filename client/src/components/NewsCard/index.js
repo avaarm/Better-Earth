@@ -1,7 +1,5 @@
 import React from "react";
-import { Row, Col, Card, Icon, CardTitle } from "react-materialize";
 import "./style.css";
-
 
 function NewsCard(props) {
   return (

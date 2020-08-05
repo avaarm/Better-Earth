@@ -12,6 +12,7 @@ function ResultCard(props) {
           <p> Your Sustainable Product</p>
           <span className="white-text">
 
+
           </span>
         </CardPanel>
       </Col>

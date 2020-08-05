@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-materialize";
 import NewsCard from "../NewsCard";
 import API from "../../utils/API";
-import { STATES } from "mongoose";
 import "./style.css";
 
 function News() {
@@ -47,14 +46,14 @@ function News() {
           {
             !seeAll ? (
               <button
-                class="waves-effect waves-light btn newsButton"
+                className="waves-effect waves-light btn newsButton"
                 onClick={handleToggleSeeAll}
               >
                 See More
               </button>
             ) : (
               <button
-                class="waves-effect waves-light btn newsButton"
+                className="waves-effect waves-light btn newsButton"
                 onClick={handleToggleSeeAll}
               >
                 See Less
@@ -80,7 +79,7 @@ function News() {
                   url={item.url}
                   urlToImage={item.urlToImage}
                   publishedAt={item.publishedAt}
-                  id={item.index}
+                  id={index}
                 />
               ))
             : 
@@ -93,7 +92,7 @@ function News() {
                   url={item.url}
                   urlToImage={item.urlToImage}
                   publishedAt={item.publishedAt}
-                  id={item.index}
+                  id={index}
                 />
             ))}
         </Col>
@@ -115,7 +114,7 @@ function News() {
                   url={item.url}
                   urlToImage={item.urlToImage}
                   publishedAt={item.publishedAt}
-                  id={item.index}
+                  id={index}
                 />
               ))
             : 
@@ -128,7 +127,7 @@ function News() {
                   url={item.url}
                   urlToImage={item.urlToImage}
                   publishedAt={item.publishedAt}
-                  id={item.index}
+                  id={index}
                 />
             ))}
         </Col>
