@@ -38,6 +38,7 @@ function Nav(props) {
         <NavItem href="/news">News</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/login">Login</NavItem>
+        <NavItem href="/register">Register</NavItem>
       </Navbar> 
       <div>
         <img alt="waves" src={waves} />
