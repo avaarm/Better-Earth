@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, } from "react-router-dom";
 import MainContainer from "./pages/MainContainer";
 import NewsAPI from "./components/NewsAPI";
 import RegisterLogin from "./PassportJS/registerLogin"
+import Register from "./PassportJS/register"
 import Nav from "./components/Nav";
 import About from "./components/About";
 import FootprintCard from "./components/FootprintCard";
@@ -27,6 +28,10 @@ function App() {
         <Route exact path="/login">
           <Nav />
           <RegisterLogin />
+        </Route>
+        <Route exact path="/register">
+          <Nav />
+          <Register />
         </Route>
       </div>
     </Router>
