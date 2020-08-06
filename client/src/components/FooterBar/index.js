@@ -8,7 +8,7 @@ function FooterBar() {
     return (
       <div> 
         <div>
-          <img src={Wave3} />
+          <img alt="waves" src={Wave3} />
         </div>
 
         <Footer

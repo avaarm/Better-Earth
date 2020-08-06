@@ -6,7 +6,7 @@ function NewsCard(props) {
       <div className="col s12 m6 l6">
         <div className="card small">
           <div className="card-image">
-            <img src={props.urlToImage} />
+            <img alt="" src={props.urlToImage} />
             <span className="card-title">{props.title}</span>
           </div>
           <div className="card-content">
