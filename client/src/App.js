@@ -1,9 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, } from "react-router-dom";
 import MainContainer from "./pages/MainContainer";
 import NewsAPI from "./components/NewsAPI";
-// import About from "./pages/About";
-// import Signup from "./components/Signup";
 import RegisterLogin from "./PassportJS/registerLogin"
 import Nav from "./components/Nav";
 import About from "./components/About";
@@ -22,7 +20,6 @@ function App() {
           <Nav />
           <About />
         </Route>
-
         <Route exact path="/footprintCard">
           <Nav />
           <FootprintCard />
@@ -31,7 +28,6 @@ function App() {
           <Nav />
           <RegisterLogin />
         </Route>
-
       </div>
     </Router>
   );

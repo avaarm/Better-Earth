@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-import Nav from "../components/Nav";
-import FootprintCard from "../components/FootprintCard";
+import {  Route, Redirect } from "react-router-dom";
 
 function RegisterLogin() {
   const [email, setEmail] = useState("");
@@ -13,8 +11,8 @@ function RegisterLogin() {
     event.preventDefault();
 
     const userData = {
-      email,
-      password,
+      email: email,
+      password: password
     };
     // routing needs to be done here
     axios
@@ -39,7 +37,7 @@ function RegisterLogin() {
     {loggedIn ? (
       <Route>
        <Redirect to={{pathname: "/"}} />
-       </Route>
+      </Route>
        ) : (
        <div className="container">
         <div className="row">
@@ -57,7 +55,6 @@ function RegisterLogin() {
                   type="email"
                   className="validate"
                   onChange={(e) => {
-                    // console.log(email)
                     setEmail(e.target.value);
                   }}
                 />
@@ -70,7 +67,6 @@ function RegisterLogin() {
                   type="password"
                   className="validate"
                   onChange={(e) => {
-                    // console.log(password)
                     setPassword(e.target.value);
                   }}
                 />
