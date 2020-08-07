@@ -49,7 +49,7 @@ function CategorySearch() {
                       <option value="10">Produce Bags</option>
                       <option value="11">Food Storage Bags</option>
                       <option value="12">Water Bottle</option>
-                      <option value="12">Napkins</option>
+                      <option value="13">Napkins</option>
                     </Select>
                 <CardPanel className="innerCard">
                   <span className="white-text">
