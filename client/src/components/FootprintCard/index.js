@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Card, Icon, Select, Range, CardTitle } from "react-materialize";
+import { Row, Col, Card, Icon, Select, Button, CardTitle } from "react-materialize";
 import "./style.css";
 
 function FootprintCard(props) {
@@ -99,6 +99,16 @@ function FootprintCard(props) {
                       <option value="5">4 people</option>
                       <option value="6">5 or more people</option>
                     </Select>
+                    <Button
+  node="button"
+  type="submit"
+  waves="light"
+>
+  Submit
+  <Icon right>
+    send
+  </Icon>
+</Button>
 
               </form>
             }
