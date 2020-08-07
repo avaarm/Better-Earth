@@ -6,7 +6,7 @@ function FootprintCard(props) {
   return (
     <div>
       <Row>
-        <Col s={12} m={6} l={3} offset="s2 m2 l2" pull="s1 m1 l1">
+        <Col s={12} m={6} l={8} offset="s2 m2 l3" pull="s1 m1 l1">
           <Card
             className="card-panel orangeCard lighten-2 center-align footprint hoverable"
             closeIcon={<Icon>close</Icon>}
@@ -30,13 +30,14 @@ function FootprintCard(props) {
                   Zip Code:
                   <input type="text" name="name" />
                 </label>
+                <br></br>
                 <Select
                       id="Select-9"
                       multiple
                       options={{
                         classes: "",
                         dropdownOptions: {
-                          alignment: "left",
+                          alignment: "center",
                           autoTrigger: true,
                           closeOnClick: true,
                           constrainWidth: true,
@@ -67,6 +68,10 @@ function FootprintCard(props) {
                       <option value="10">$100,000 to $119,999</option>
                       <option value="11">$120,000 or more</option>
                     </Select>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                     <Select
                       id="Select-9"
                       multiple
@@ -99,6 +104,10 @@ function FootprintCard(props) {
                       <option value="5">4 people</option>
                       <option value="6">5 or more people</option>
                     </Select>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                     <Button
   node="button"
   type="submit"
