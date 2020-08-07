@@ -6,6 +6,7 @@ import RegisterLogin from "./PassportJS/registerLogin"
 import Nav from "./components/Nav";
 import About from "./components/About";
 import FootprintCard from "./components/FootprintCard";
+import FootprintHistory from "./components/FootprintHistory";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/footprintCard">
           <Nav />
           <FootprintCard />
+          <FootprintHistory />
         </Route>
         <Route exact path="/login">
           <Nav />
