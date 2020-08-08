@@ -27,7 +27,7 @@ router.post("/register_login", (req, res, next) => {
 
 // trying out register only
 router.post("/newregister", (req, res, next) => {
-    console.log(req.body)
+    const name = req.body.name
     passport.authenticate("local", function(err, user, info) {
         if (err) {
             return res.status(400).json({ errors: err });
@@ -39,24 +39,42 @@ router.post("/newregister", (req, res, next) => {
             if (err) {
                 return res.status(400).json({ errors: err });
             }
+            // after authentication, entering name to user in
+            db.User.updateOne({_id: user.id}, { $set: {name: name}},
+                function(err, res) {
+                    if (err) throw err;
+                    console.log("user name should be in database");
+                })
             return (
-                res.status(200).json({ success: `logged in ${user.id}` })
+                // res.status(200).json({ success: `logged in ${user.id}` })
+                res.status(200).json({ name: name })
             
             );
         });
     })(req, res, next);
 });
-// router.post("/newregister",function(req,res){
-//     console.log("inside authregister");
-//     console.log(req.body);
-//     db.Users.create(req.body).then(function(err){
-//         if (err) throw err
-//         res.json(true)
-//     })
-// })
+
+router.post("/freshregister", function(req,res) {
+    console.log("inside authregister");
+    console.log(req.body);
+    db.User.findOne({ email: email })
+        .then(user => {
+            if(!user) {
+                db.User.create(req.body).then(function(err, doc){
+                    if (err) return err;
+                    else {
+                        res.json(doc) 
+                    }
+                })
+            }
+            else {
+                alert("user must already exist");
+            }
+        })
+    })
+
 router.get('/logout', function(req, res){
-    req.logout();
-    res.redirect('/');
+    req.session.destroy();
   });
 
 module.exports = router;

@@ -14,7 +14,7 @@ function Register() {
   const logout = (event) => {
     event.preventDefault();
     axios.get('/api/auth/logout', function(req, res){
-        console.log(res.json("this"))
+        console.log("this")
       });
   }
 
@@ -28,10 +28,12 @@ function Register() {
       password: password,
     };
     // routing needs to be done here
-    console.log(userData);
     axios
       .post("/api/auth/newregister", userData)
+    //   .post("/api/auth/freshregister", userData)
       .then((res) => {
+          const username = res.data.name;
+          console.log("Hi " + username + "!")
         if (res.status === 200) {
           console.log("successful login");
           setLoggedIn(true);
