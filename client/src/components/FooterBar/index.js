@@ -7,9 +7,9 @@ import ContributorList from "../ContributorList";
 function FooterBar() {
     return (
       <div> 
-        <div>
-          <img alt="waves" src={Wave3} />
-        </div>
+
+          <img className="waveFooter" alt="waves" src={Wave3} />
+
 
         <Footer
           className="footerCard accent-2 footer"
