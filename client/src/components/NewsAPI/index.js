@@ -36,12 +36,12 @@ function News() {
     <Row>
       <Col>
       <div className="card-panel">
-      <div className="container">
+
         <h3 className="backColor">Environmental News</h3>
-      </div>
+ 
       <Row>
 
-        <Col  >
+        <Col s={12} className="buttonCol">
           {/* can make a react router link here  */}
           {
             !seeAll ? (
@@ -65,7 +65,7 @@ function News() {
 
       <Row>
         <Col
-          m={6}
+          // m={6}
           s={12}>
 
           {!seeAll
@@ -99,9 +99,9 @@ function News() {
       </Row>
       <Row>
         <Col
-          m={6}
+       
           s={12}
-          l={6}>
+       >
 
           {!seeAll
             ? 

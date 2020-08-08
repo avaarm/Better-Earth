@@ -7,12 +7,17 @@ import "./style.css";
 function CategorySearch() {
   return (
     <Row className="outerRow">
-      <Col m={6} s={12}>
+      <Col s={12}>
         <CardPanel className="outerCard">
           <span className="white-text">
-            <p> Looking for a sustainable alterantive to everyday products? Search below for our recommendations...</p>
+            <h5 className="center">Looking for a sustainable alternative to everyday products?</h5>
+            <br />
+
+            <div>
+            Search below for our recommendations... 
+              </div> 
             <Row className="innerRow">
-              <Col m={6} s={12} l={50}>                    <Select
+              <Col s={12}>                    <Select
                       id="Select-9"
                       multiple
                       options={{
@@ -35,7 +40,7 @@ function CategorySearch() {
                       value={[""]}
                     >
                       <option disabled value="">
-                        Choose a category of product :)
+                        Select Products :)
                       </option>
                       <option value="1">Dish soap</option>
                       <option value="2">Clothing</option>
