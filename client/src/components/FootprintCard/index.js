@@ -1,16 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Row,
   Col,
-  // Card,
   Icon,
   Select,
   Button,
-  // CardTitle,
 } from "react-materialize";
 import "./style.css";
+import API from "../../utils/API";
 
-function FootprintCard(props) {
+const parser = require("fast-xml-parser");
+const he = require("he");
+
+const options = {
+  attributeNamePrefix : "@_",
+  attrNodeName: "attr", //default is 'false'
+  textNodeName : "#text",
+  ignoreAttributes : true,
+  ignoreNameSpace : false,
+  allowBooleanAttributes : false,
+  parseNodeValue : true,
+  parseAttributeValue : false,
+  trimValues: true,
+  cdataTagName: "__cdata", //default is 'false'
+  cdataPositionChar: "\\c",
+  parseTrueNumberOnly: false,
+  arrayMode: false, //"strict"
+  attrValueProcessor: (val, attrName) => he.decode(val, {isAttributeValue: true}),//default is a=>a
+  tagValueProcessor : (val, tagName) => he.decode(val), //default is a=>a
+  stopNodes: ["parse-me-as-string"]
+};
+
+function FootprintCard() {
+
+  // Set states for the footprint info, household income, household size and household zip code
+  const [footprint, setFootprint] = useState([]);
+  const [householdIncome, setHouseholdIncome] = useState("");
+  const [zipCode, setZipCode] = useState("");
+  const [householdSize, setHouseholdSize] = useState("");
+
+  // Calls the CoolClimate API and loads the necessary data
+  function loadData() {
+    const inputType = "1";
+    const input = zipCode;
+    const income = householdIncome;
+    const size = householdSize;
+    API.getFootprint(inputType, input, income, size).then(res => {
+      const jsonData = parser.parse(res.data, options);
+      console.log(jsonData.response);
+      setFootprint(jsonData.response);
+    }
+  ).catch(err => console.log(err))};
+
+  // form submit handler
+  function handleClickSubmit(event) {
+    event.preventDefault();
+    loadData();
+  }
+
+  function handleIncomeChange(event) {
+    setHouseholdIncome(event.target.value);
+  }
+
+  function handleSizeChange(event) {
+    setHouseholdSize(event.target.value);
+  }
+
+  function handleZipCodeChange(event) {
+    setZipCode(event.target.value);
+  }
+
   return (
     <div className="container">
       <form>
@@ -27,7 +86,7 @@ function FootprintCard(props) {
             Zip Code:
           </Col>
           <Col s={7} l={7}>
-            <input placeholder="Zip Code" type="text" name="name" />
+            <input placeholder="Zip Code" type="text" name="name" onChange={handleZipCodeChange}/>
           </Col>
         </Row>
 
@@ -41,8 +100,7 @@ function FootprintCard(props) {
               s={12}
               m={12}
               l={12}
-              id="Select-9"
-              multiple
+              id="household-income"
               options={{
                 classes: "",
                 dropdownOptions: {
@@ -60,7 +118,8 @@ function FootprintCard(props) {
                   outDuration: 250,
                 },
               }}
-              value={[""]}
+              value={""}
+              onChange={handleIncomeChange}
             >
               <option disabled value="">
                 Select
@@ -89,8 +148,7 @@ function FootprintCard(props) {
               s={12}
               m={12}
               l={12}
-              id="Select-9"
-              multiple
+              id="household-size"
               options={{
                 classes: "",
                 dropdownOptions: {
@@ -108,7 +166,8 @@ function FootprintCard(props) {
                   outDuration: 250,
                 },
               }}
-              value={[""]}
+              value={""}
+              onChange={handleSizeChange}
             >
               <option disabled value="">
                 Select
@@ -127,7 +186,12 @@ function FootprintCard(props) {
         <Row>
           <Col s={5} m={5} l={5} />
           <Col s={7} m={7} l={7} >
-            <Button node="button" type="submit" waves="light">
+            <Button 
+              node="button" 
+              type="submit" 
+              waves="light" 
+              onClick={handleClickSubmit}
+            >
               Submit
               <Icon right>send</Icon>
             </Button>
