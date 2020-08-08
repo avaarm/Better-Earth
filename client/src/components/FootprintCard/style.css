@@ -8,3 +8,16 @@
     margin-top: 100px;
     background-color: #fccf43;
 }
+
+.zip{
+    margin: 15px 15px;
+    float: left;
+}
+
+.middle{
+    text-align: center;  
+}
+
+.subButton{
+    margin: 10px 10px;
+}
