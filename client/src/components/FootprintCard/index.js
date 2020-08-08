@@ -97,12 +97,12 @@ function FootprintCard(props) {
                       <option disabled value="">
                         Number of people in the household
                       </option>
-                      <option value="1">Average</option>
-                      <option value="2">1 person</option>
-                      <option value="3">2 people</option>
-                      <option value="4">3 people</option>
-                      <option value="5">4 people</option>
-                      <option value="6">5 or more people</option>
+                      <option value="0">Average</option>
+                      <option value="1">1 person</option>
+                      <option value="2">2 people</option>
+                      <option value="3">3 people</option>
+                      <option value="4">4 people</option>
+                      <option value="5">5 or more people</option>
                     </Select>
                     <br></br>
                     <br></br>
