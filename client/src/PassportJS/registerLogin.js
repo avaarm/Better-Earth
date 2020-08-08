@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import {  Route, Redirect } from "react-router-dom";
+import M from "materialize-css";
 
 function RegisterLogin() {
   const [email, setEmail] = useState("");
@@ -48,7 +49,8 @@ function RegisterLogin() {
         <div className="row">
           <form className="col s12" onSubmit={onSubmit}>
             <div className="row">
-              <div className="input-field col s6">
+              <div className="col s1 m3 l3"></div>
+              <div className="input-field col s10 m6 m6">
                 <i className="material-icons prefix">email</i>
                 <input
                   id="emailLogin"
@@ -60,7 +62,11 @@ function RegisterLogin() {
                 />
                 <label htmlFor="emailLogin">Email</label>
               </div>
-              <div className="input-field col s6">
+              <div className="col s1 m3 l3"></div>
+              </div>
+              <div className="row">
+              <div className="col s1 m3 l3"></div>
+              <div className="input-field col s10 m6 m6">
                 <i className="material-icons prefix">work</i>
                 <input
                   id="passwordLogin"
@@ -72,6 +78,7 @@ function RegisterLogin() {
                 />
                 <label htmlFor="passwordLogin">Password</label>
               </div>
+              <div className="col s1 m3 l3"></div>
             </div>
             <div className="row">
               <div className="col s12 center">
