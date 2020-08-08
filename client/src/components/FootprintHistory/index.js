@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Row, Col, CardPanel } from 'react-materialize';
+import React, { useState } from "react";
+import { Row, Col, CardPanel, Button } from 'react-materialize';
 import "./style.css";
 import API from "../../utils/API";
 
@@ -25,13 +25,13 @@ const options = {
   stopNodes: ["parse-me-as-string"]
 };
 
-function FootprintHistory () {
+function FootprintHistory() {
 
   const [footprint, setFootprint] = useState([]);
 
-  useEffect(() => {
-    loadData();
-  }, []);  
+  // useEffect(() => {
+  //   loadData();
+  // }, []);
 
   function loadData() {
     const inputType = "1";
@@ -45,25 +45,40 @@ function FootprintHistory () {
     }
   ).catch(err => console.log(err))};
 
-    return (
-      <Row>
-        <Col
-          l={6}
-          m={6}
-          s={12}
-        >
-          <CardPanel className="orangeCard">
-            <span className="white-text">
-              <p>You chose: {footprint.input_location}</p>
-              <p>The size of your household: {footprint.input_size}</p>
-              <p>Population of your zip code: {footprint.input_population}</p>
-              <p>Type of location chosen: {footprint.input_location_mode}</p>
-              <p>Income: {footprint.input_income}</p>
-            </span>
-          </CardPanel>
-        </Col>
-      </Row>
-    );
+  function handleClick(event) {
+    event.preventDefault();
+    loadData();
   }
+
+  return (
+    <Row>
+      <Col
+        l={6}
+        m={6}
+        s={12}
+      >
+        <CardPanel className="orangeCard">
+          <span className="white-text">
+            <p className="location">You chose: {footprint.input_location}</p>
+            <p className="size">The size of your household: {footprint.input_size}</p>
+            <p className="population">Population of your zip code: {footprint.input_population}</p>
+            <p className="mode">Type of location chosen: {footprint.input_location_mode}</p>
+            <p className="income">Income: {footprint.input_income}</p>
+          </span>
+        </CardPanel>
+        <Button
+          node="button"
+          style={{
+            marginRight: '5px'
+          }}
+          waves="light"
+          onClick={handleClick}
+        >
+          Submit
+        </Button>
+      </Col>
+    </Row>
+  );
+}
 
 export default FootprintHistory;
