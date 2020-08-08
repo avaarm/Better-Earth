@@ -25,7 +25,6 @@ function App() {
         <Route exact path="/footprintCard">
           <Nav />
           <FootprintCard />
-          <FootprintHistory />
         </Route>
         <Route exact path="/login">
           <Nav />
