@@ -58,7 +58,7 @@ function FootprintHistory() {
         s={12}
       >
         <CardPanel className="orangeCard">
-          <span className="white-text">
+          <span className="black-text">
             <p className="location">You chose: {footprint.input_location}</p>
             <p className="size">The size of your household: {footprint.input_size}</p>
             <p className="population">Population of your zip code: {footprint.input_population}</p>
