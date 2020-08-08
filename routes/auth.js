@@ -54,24 +54,6 @@ router.post("/newregister", (req, res, next) => {
     })(req, res, next);
 });
 
-router.post("/freshregister", function(req,res) {
-    console.log("inside authregister");
-    console.log(req.body);
-    db.User.findOne({ email: email })
-        .then(user => {
-            if(!user) {
-                db.User.create(req.body).then(function(err, doc){
-                    if (err) return err;
-                    else {
-                        res.json(doc) 
-                    }
-                })
-            }
-            else {
-                alert("user must already exist");
-            }
-        })
-    })
 
 router.get('/logout', function(req, res){
     req.session.destroy();
