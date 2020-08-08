@@ -8,6 +8,7 @@ import {
 } from "react-materialize";
 import "./style.css";
 import API from "../../utils/API";
+import FootprintHistory from "../FootprintHistory";
 
 const parser = require("fast-xml-parser");
 const he = require("he");
@@ -39,6 +40,9 @@ function FootprintCard() {
   const [zipCode, setZipCode] = useState("");
   const [householdSize, setHouseholdSize] = useState("");
 
+  // Set state for displaying the footprint history card
+  const [displayResults, setDisplayResults] = useState(false);
+
   // Calls the CoolClimate API and loads the necessary data
   function loadData() {
     const inputType = "1";
@@ -56,6 +60,7 @@ function FootprintCard() {
   function handleClickSubmit(event) {
     event.preventDefault();
     loadData();
+    setDisplayResults(true);
   }
 
   function handleIncomeChange(event) {
@@ -198,6 +203,10 @@ function FootprintCard() {
           </Col>
         </Row>
       </form>
+      {displayResults ? (
+        <FootprintHistory data={footprint}/>
+      ):
+      (<div></div>)}
       {/* <Row>
         <Col>
           <Card
