@@ -34,12 +34,13 @@ function Register() {
       .then((res) => {
           const username = res.data.name;
           console.log("Hi " + username + "!")
+          setName(username);
         if (res.status === 200) {
           console.log("successful login");
           setLoggedIn(true);
-          setName("");
-          setPassword("");
-          setEmail("");
+          // setName("");
+          // setPassword("");
+          // setEmail("");
         }
       })
       .catch((err) => {
@@ -51,7 +52,12 @@ function Register() {
   };
 
   return (
-    <div className="container">
+    <div>
+      {loggedIn ? (
+        <h1>Hi {name} </h1>
+      ) :
+      (
+        <div className="container">
       <div className="row">
         <div className="col s12 center">
           <h3>Begin your Better Earth lifestyle!</h3>
@@ -131,6 +137,12 @@ function Register() {
                 <i className="material-icons prefix">send</i>
               </button>
     </div>
+
+      )
+
+      }
+    </div>
+    
   );
 }
 
