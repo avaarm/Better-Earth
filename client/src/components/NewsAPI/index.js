@@ -2,26 +2,22 @@ import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-materialize";
 import NewsCard from "../NewsCard";
 import API from "../../utils/API";
+import NewsTab from "./newsTab";
 import "./style.css";
 
-function News() {
+function News(props) {
   const [news, setNews] = useState([]);
-
+  const [newsSearch, setNewsSearch] = useState("environment")
   // toggling between 5 vs all the results
   const [seeAll, toggleSeeAll] = useState(false);
 
   useEffect(() => {
-    loadNews();
-    // API.coolClimate().then(response => {
-    //   // response.json(response.data);
-    //   console.log(response.data)
-    // }).catch(err => {
-    //   console.log(err);
-    // })
-  }, []);
+    setNewsSearch(props.search)
+    loadNews(newsSearch);
+  }, [props.search]);
 
-  function loadNews() {
-    API.getNews()
+  function loadNews(query) {
+    API.getNews(query)
       .then((response) => {
         setNews(response.data.articles);
       })
@@ -35,108 +31,65 @@ function News() {
   return (
     <Row>
       <Col>
-      <div className="card-panel">
+          <Row>
+            <Col s={12} className="buttonCol">
+              {/* can make a react router link here  */}
+              {!seeAll ? (
+                <button
+                  className="waves-effect waves-light btn newsButton"
+                  onClick={handleToggleSeeAll}
+                >
+                  See More
+                </button>
+              ) : (
+                <button
+                  className="waves-effect waves-light btn newsButton"
+                  onClick={handleToggleSeeAll}
+                >
+                  See Less
+                </button>
+              )}
+            </Col>
+          </Row>
 
-        <h3 className="backColor">Environmental News</h3>
- 
-      <Row>
-
-        <Col s={12} className="buttonCol">
-          {/* can make a react router link here  */}
-          {
-            !seeAll ? (
-              <button
-                className="waves-effect waves-light btn newsButton"
-                onClick={handleToggleSeeAll}
-              >
-                See More
-              </button>
-            ) : (
-              <button
-                className="waves-effect waves-light btn newsButton"
-                onClick={handleToggleSeeAll}
-              >
-                See Less
-              </button>
-            )
-          }
-        </Col>
-      </Row>
-
-      <Row>
-        <Col
-          // m={6}
-          s={12}>
-
-          {!seeAll
-            ? 
-              news.slice(0, 2).map((item, index) => (
-                <NewsCard
-                  title={item.title}
-                  source={item.source.name}
-                  author={item.author}
-                  description={item.description}
-                  url={item.url}
-                  urlToImage={item.urlToImage}
-                  publishedAt={item.publishedAt}
-                  id={index}
-                />
-              ))
-            : 
-            news.slice(4, 6).map((item, index) => (
-                <NewsCard
-                  title={item.title}
-                  source={item.source.name}
-                  author={item.author}
-                  description={item.description}
-                  url={item.url}
-                  urlToImage={item.urlToImage}
-                  publishedAt={item.publishedAt}
-                  id={index}
-                />
-            ))}
-        </Col>
-      </Row>
-      <Row>
-        <Col
-       
-          s={12}
-       >
-
-          {!seeAll
-            ? 
-              news.slice(2, 4).map((item, index) => (
-                <NewsCard
-                  title={item.title}
-                  source={item.source.name}
-                  author={item.author}
-                  description={item.description}
-                  url={item.url}
-                  urlToImage={item.urlToImage}
-                  publishedAt={item.publishedAt}
-                  id={index}
-                />
-              ))
-            : 
-            news.slice(6, 8).map((item, index) => (
-                <NewsCard
-                  title={item.title}
-                  source={item.source.name}
-                  author={item.author}
-                  description={item.description}
-                  url={item.url}
-                  urlToImage={item.urlToImage}
-                  publishedAt={item.publishedAt}
-                  id={index}
-                />
-            ))}
-        </Col>
-      </Row>
-
-    </div>
+          <Row>
+            <Col
+              // m={6}
+              s={12}
+            >
+              {!seeAll
+                ? news
+                    .slice(0, 4)
+                    .map((item, index) => (
+                      <NewsCard
+                        title={item.title}
+                        source={item.source.name}
+                        author={item.author}
+                        description={item.description}
+                        url={item.url}
+                        urlToImage={item.urlToImage}
+                        publishedAt={item.publishedAt}
+                        id={index}
+                      />
+                    ))
+                : news
+                    .slice(4, 8)
+                    .map((item, index) => (
+                      <NewsCard
+                        title={item.title}
+                        source={item.source.name}
+                        author={item.author}
+                        description={item.description}
+                        url={item.url}
+                        urlToImage={item.urlToImage}
+                        publishedAt={item.publishedAt}
+                        id={index}
+                      />
+                    ))}
+            </Col>
+          </Row>
       </Col>
     </Row>
-    
   );
 }
 
