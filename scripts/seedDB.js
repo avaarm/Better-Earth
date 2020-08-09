@@ -7,7 +7,8 @@ mongoose.connect(
 
 const productSeed = [
   {
-    category: "Dish soap",
+    category: "Kitchen",
+    name: "Dish soap",
     thumbnail: "",
     href: "https://www.blueland.com/collections/all/products/dish-soap-starter-set?gclid=CjwKCAjwjqT5BRAPEiwAJlBuBdPAOdyXK8qu299x3cbhg0dgars-ti0ZV1Q0dxTPt-9gGrSX3RxkKBoCIOQQAvD_BwE",
     summary: "Blueland ships a reusable bottle and tablets. All you have to do is fill your bottle with water. Drop in a cleaning or soap tablet and you are good to go. ",
@@ -15,13 +16,15 @@ const productSeed = [
   },
   {
     category: "Clothing",
+    name: "",
     thumbnail: "",
     href: "https://www.wearethought.com/?utm_source=Affiliate&utm_medium=LinkShare&utm_campaign=QFGLnEolOWg&utm_content=15&utm_term=UKNetwork&ranSiteID=QFGLnEolOWg-11xssrDxvPBTHP9fHEGLLg&siteID=QFGLnEolOWg-11xssrDxvPBTHP9fHEGLLg",
     summary: "",
     title: ""
   },
   {
-    category: "Hand Soap",
+    category: "Bathroom",
+    name: "",
     thumbnail: "",
     href: "https://www.blueland.com/pages/how-it-works",
     summary: "",
@@ -29,34 +32,39 @@ const productSeed = [
   },
   {
     category: "Shoes",
+    name: "",
     thumbnail: "",
     href: "",
     summary: "",
     title: " "
   },
   {
-    category: "Straws",
+    category: "General House",
+    name: "",
     thumbnail: "",
     href: "",
     summary: "",
     title: ""
   },
   {
-    category: "Makeup Remover",
+    category: "Accessories",
+    name: "",
     thumbnail: "",
     href: "",
     summary: "",
     title: ""
   },
   {
-    category: "Sponges",
+    category: "Storage",
+    name: "",
     thumbnail: "",
     href:"",
     summary: "",
     title: ""
   },
   {
-    category: "Storage Containers",
+    category: "Outdoor Gear",
+    name: "",
     thumbnail: "",
     href: "",
     summary: "",
@@ -64,6 +72,7 @@ const productSeed = [
   },
   {
     category: "Dryer Balls",
+    name: "",
     thumbnail: "",
     href: "",
     summary: "",
@@ -71,6 +80,7 @@ const productSeed = [
   },
   {
     category: "Produce Bags",
+    name: "",
     thumbnail: "",
     href: "",
     summary: "",
@@ -78,20 +88,7 @@ const productSeed = [
   },
   {
     category: "Food Storage Bags",
-    thumbnail: "",
-    href: "",
-    summary: "",
-    title: ""
-  },
-  {
-    category: "Water Bottle",
-    thumbnail: "",
-    href: "",
-    summary: "",
-    title: ""
-  },
-  {
-    category: "Napkins",
+    name: "",
     thumbnail: "",
     href: "",
     summary: "",
