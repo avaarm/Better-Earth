@@ -41,7 +41,7 @@ function Nav(props) {
         <NavItem href="/register">Register</NavItem>
       </Navbar> 
       <div>
-        <img alt="waves" src={waves} />
+        <img className="waves" alt="waves" src={waves} />
       </div>
     </div>
   );
