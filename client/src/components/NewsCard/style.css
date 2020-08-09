@@ -1,5 +1,5 @@
 /* .card-image{
-    height: 100px;
+    height: 200px;
     overflow: hidden;
 } */
 
@@ -7,4 +7,13 @@
     font-size: 12px !important;
     margin-bottom: 0px;
     padding-bottom: 10px !important;
+
 }
+
+.linkColor{
+    color: white;
+}
+
+/* .imgHeight {
+    height: 200px;
+} */
