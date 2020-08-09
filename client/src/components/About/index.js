@@ -8,7 +8,7 @@ import "./style.css";
 function About() {
   return (
     <Row>
-      <Col m={6} s={12}>
+      <Col m={14} s={20} l={25}>
         <CardPanel className="teal">
           <div classname="container center">
             <h1 className="white-text center">Better Earth</h1>

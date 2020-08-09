@@ -44,19 +44,14 @@ function CategorySearch() {
                   <option disabled value="">
                     Select Products :)
                   </option>
-                  <option value="1">Dish soap</option>
-                  <option value="2">Clothing</option>
-                  <option value="3">Hand Soap</option>
+                  <option value="1">Kitchen </option>
+                  <option value="2">Bathroom</option>
+                  <option value="3">Clothing</option>
                   <option value="4">Shoes</option>
-                  <option value="5">Straws</option>
-                  <option value="6">Makeup Remover</option>
-                  <option value="7">Sponges</option>
-                  <option value="8">Storage Containers</option>
-                  <option value="9">Dryer Balls</option>
-                  <option value="10">Produce Bags</option>
-                  <option value="11">Food Storage Bags</option>
-                  <option value="12">Water Bottle</option>
-                  <option value="13">Napkins</option>
+                  <option value="5">General House</option>
+                  <option value="6">Accessories</option>
+                  <option value="7">Storage</option>
+                  <option value="8">Outdoor Gear</option>
                 </Select>
                 <CardPanel className="innerCard">
                   <span className="white-text"></span>
