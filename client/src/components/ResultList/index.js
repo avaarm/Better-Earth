@@ -25,7 +25,7 @@ function ResultList() {
 
   const getProducts = () => {
     dispatch({ type: LOADING });
-    API.getProducts()
+    API.getProduct()
       .then(results => {
         dispatch({
           type: UPDATE_PRODUCTS,
@@ -44,7 +44,7 @@ function ResultList() {
     <Row>
       <Col s={12}>
         <CardPanel className="productResults">
-          <p className="center"> Your Sustainable Product Here</p>
+   
 
           <span className="white-text">
             <div>
