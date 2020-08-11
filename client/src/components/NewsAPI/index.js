@@ -2,17 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-materialize";
 import NewsCard from "../NewsCard";
 import API from "../../utils/API";
-import NewsTab from "./newsTab";
 import "./style.css";
 
 function News(props) {
   const [news, setNews] = useState([]);
-  const [newsSearch, setNewsSearch] = useState("environment")
-  // toggling between 5 vs all the results
+  // const [newsSearch, setNewsSearch] = useState("environment")
+  // // toggling between 5 vs all the results
   const [seeAll, toggleSeeAll] = useState(false);
 
   useEffect(() => {
-    setNewsSearch(props.search)
+    // setNewsSearch(props.search)
     loadNews(props.search);
   }, [props.search]);
 
@@ -69,7 +68,7 @@ function News(props) {
                         url={item.url}
                         urlToImage={item.urlToImage}
                         publishedAt={item.publishedAt}
-                        id={index}
+                        key={index}
                       />
                     ))
                 : news

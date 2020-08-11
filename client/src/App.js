@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, } from "react-router-dom";
 import MainContainer from "./pages/MainContainer";
-import NewsAPI from "./components/NewsAPI";
+import NewsTab from "./components/NewsAPI/newsTab";
 import RegisterLogin from "./PassportJS/registerLogin"
 import Register from "./PassportJS/register"
 import Nav from "./components/Nav";
 import About from "./components/About";
 import FootprintCard from "./components/FootprintCard";
-import FootprintHistory from "./components/FootprintHistory";
+// import FootprintHistory from "./components/FootprintHistory";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         </Route>
         <Route exact path="/news">
           <Nav />
-          <NewsAPI />
+          <NewsTab />
         </Route>
         <Route exact path="/about">
           <Nav />

@@ -1,14 +1,12 @@
 import React from "react";
 import { Navbar, Icon, NavItem } from "react-materialize";
-import M from "materialize-css";
+// import M from "materialize-css";
 import "./style.css";
 import waves from "./waves.svg"
-import { useLocation} from "react-router-dom";
 
 // anything that is materialize react specific has to be imported
 
 function Nav(props) {
-  const location = useLocation();
   return (
     <div>
       <Navbar
