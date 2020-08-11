@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Tab, Tabs, Row, Col } from "react-materialize";
-import NewsCard from "../NewsCard";
-import API from "../../utils/API";
+import { Row, Col } from "react-materialize";
 import "./style.css";
 import News from "./index"
 
 function NewsTab() {
-  const [newsSearch, setNewsSearch] = useState("environment");
+  const [newsSearch, setNewsSearch] = useState("climatechange");
 
   useEffect(() => {
     console.log(newsSearch);

@@ -1,7 +1,5 @@
 import React, { useEffect, useState }  from "react";
-import Nav from "../components/Nav";
 import CategorySearch from "../components/CategorySearch";
-import NewsAPI from "../components/NewsAPI";
 import NewsTab from "../components/NewsAPI/newsTab";
 import ResultCard from "../components/ResultCard";
 import FootprintCard from "../components/FootprintCard";
@@ -19,7 +17,7 @@ function MainContainer(props) {
       <div>
         <Row>
           <Col>
-            <h1>Welcome {props.name ? (`${name}`):("to Better Earth!")}</h1>
+            <h2 className="center">Welcome {props.name ? (`${name}`):("to Better Earth!")}</h2>
           </Col>
         </Row>
         {/* <div className="container"> */}

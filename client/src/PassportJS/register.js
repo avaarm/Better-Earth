@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import M from "materialize-css";
+// import M from "materialize-css";
 import axios from "axios";
 import "./style.css";
-import {  Route, Redirect } from "react-router-dom";
-import { Col, Row } from "react-materialize";
 import MainContainer from "../pages/MainContainer"
 
 
