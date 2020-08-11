@@ -1,10 +1,10 @@
 import React, { useEffect, useState }  from "react";
 import CategorySearch from "../components/CategorySearch";
 import NewsTab from "../components/NewsAPI/newsTab";
-import ResultCard from "../components/ResultCard";
 import FootprintCard from "../components/FootprintCard";
 import FooterBar from "../components/FooterBar"
 import { Col, Row } from "react-materialize";
+import ResultList from "../components/ResultList";
 
 function MainContainer(props) {
   const [name, setName] = useState("");
@@ -22,7 +22,7 @@ function MainContainer(props) {
         </Row>
         {/* <div className="container"> */}
           <CategorySearch /> 
-          <ResultCard />
+          <ResultList />
           <NewsTab />
           {/* <NewsAPI /> */}
           <FootprintCard />

@@ -1,6 +1,7 @@
 import React from "react";
-import { Row, Col, CardPanel, Select } from "react-materialize";
+import { Row, Col, CardPanel, Select, Button } from "react-materialize";
 import "./style.css";
+// import { StoreProvider, useStoreContext } from "../../utils/GlobalState";
 
 // anything that is materialize react specific has to be imported
 
@@ -17,11 +18,10 @@ function CategorySearch() {
 
             <div>Search below for our recommendations...</div>
             <Row className="innerRow">
-              <Col s={12}>
+              <Col s={10}>
                 <Select
-                s={12}
-                  id="Select-9"
-                
+                  s={12}
+                  id="prod-type"
                   multiple
                   options={{
                     classes: "",
@@ -42,21 +42,32 @@ function CategorySearch() {
                   }}
                   value={[""]}
                 >
-                  {/* <option disabled value="">
-                    Select Products :)
-                  </option> */}
-                  <option value="1">Kitchen </option>
+                  <option disabled value="">
+                 
+                  </option>
+                  <option value="1">Accessories</option>
                   <option value="2">Bathroom</option>
                   <option value="3">Clothing</option>
                   <option value="4">Shoes</option>
-                  <option value="5">General House</option>
-                  <option value="6">Accessories</option>
+                  <option value="5">General House Goods</option>
+                  <option value="6">Kitchen</option>
                   <option value="7">Storage</option>
                   <option value="8">Outdoor Gear</option>
+                  <option value="9">Other</option>
                 </Select>
+
                 <CardPanel className="innerCard">
                   <span className="white-text"></span>
                 </CardPanel>
+                <Button
+                  node="button"
+                  style={{
+                    marginRight: "5px",
+                  }}
+                  waves="light"
+                >
+                  Search
+                </Button>
               </Col>
             </Row>
           </span>
