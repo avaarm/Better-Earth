@@ -15,6 +15,7 @@ function App() {
   return (
     <Router>
       <div>
+      <StoreProvider>
         
         <Route exact path="/" component={MainContainer} />
         <Route exact path="/news">
@@ -37,6 +38,7 @@ function App() {
           <Nav />
           <Register />
         </Route>
+      </StoreProvider>
       </div>
     </Router>
   );
