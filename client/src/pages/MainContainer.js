@@ -14,22 +14,21 @@ function MainContainer(props) {
   }, [name]);
 
   return (
-      <div>
-        <Row>
-          <Col
-            s={12}>
-            <h2 className="center">Welcome {props.name ? (`${name}`):("to Better Earth!")}</h2>
-          </Col>
-        </Row>
-        {/* <div className="container"> */}
-          <CategorySearch /> 
-          <ResultList />
-          <NewsTab />
-          {/* <NewsAPI /> */}
-          <FootprintCard />
-        {/* </div> */}
-        <FooterBar />
-      </div>
+    <div>
+      {/* When user is directed from /register and logs on, name is passed as a prop */}
+      <Row>
+        <Col
+        s={12}>
+          <h2 className="center">
+            Welcome {props.name ? (`${name}`):("to Better Earth!")}
+          </h2>
+        </Col>
+      </Row>
+      <CategorySearch /> 
+      <ResultList />
+      <NewsTab />
+      <FootprintCard />
+    </div>
   );
 }
 

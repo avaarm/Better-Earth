@@ -8,42 +8,22 @@ import Nav from "./components/Nav";
 import About from "./components/About";
 import FootprintCard from "./components/FootprintCard";
 import { StoreProvider } from "./utils/GlobalState";
-
+import FooterBar from "./components/FooterBar";
 
 // not all have to be exact paths
 function App() {
   return (
     <Router>
-      <div>
+      <Nav />
       <StoreProvider >
-        <Route exact path="/">
-          <Nav />
-          <MainContainer />
-          
-        </Route>
-       
-        <Route exact path="/news">
-          <Nav />
-          <NewsTab />
-        </Route>
-        <Route exact path="/about">
-          <Nav />
-          <About />
-        </Route>
-        <Route exact path="/footprintCard">
-          <Nav />
-          <FootprintCard />
-        </Route>
-        <Route exact path="/login">
-          <Nav />
-          <RegisterLogin />
-        </Route>
-        <Route exact path="/register">
-          <Nav />
-          <Register />
-        </Route>
+        <Route exact path="/" component={MainContainer} />
+        <Route exact path="/news" component={NewsTab} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/footprintCard" component={FootprintCard} />
+        <Route exact path="/login" component={RegisterLogin} />
+        <Route exact path="/register" component={Register} />
       </StoreProvider>
-      </div>
+      <FooterBar />
     </Router>
   );
 }
