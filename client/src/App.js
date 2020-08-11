@@ -7,12 +7,15 @@ import Register from "./PassportJS/register"
 import Nav from "./components/Nav";
 import About from "./components/About";
 import FootprintCard from "./components/FootprintCard";
-import FootprintHistory from "./components/FootprintHistory";
+import { StoreProvider } from "./utils/GlobalState";
 
+
+// not all have to be exact paths
 function App() {
   return (
     <Router>
       <div>
+        
         <Route exact path="/" component={MainContainer} />
         <Route exact path="/news">
           <Nav />
