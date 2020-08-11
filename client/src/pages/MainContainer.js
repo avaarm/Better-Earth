@@ -13,7 +13,7 @@ function MainContainer() {
         <Nav />
         {/* <div className="container"> */}
           <CategorySearch /> 
-          {/* <ResultList /> */}
+          <ResultList />
           <NewsTab />
           {/* <NewsAPI /> */}
           <FootprintCard />
