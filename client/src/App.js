@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, } from "react-router-dom";
 import MainContainer from "./pages/MainContainer";
-import NewsAPI from "./components/NewsAPI";
+import NewsTab from "./components/NewsAPI/newsTab";
 import RegisterLogin from "./PassportJS/registerLogin"
 import Register from "./PassportJS/register"
 import Nav from "./components/Nav";
@@ -15,12 +15,16 @@ function App() {
   return (
     <Router>
       <div>
-      <StoreProvider>
-        
-        <Route exact path="/" component={MainContainer} />
+      <StoreProvider >
+        <Route exact path="/">
+          <Nav />
+          <MainContainer />
+          
+        </Route>
+       
         <Route exact path="/news">
           <Nav />
-          <NewsAPI />
+          <NewsTab />
         </Route>
         <Route exact path="/about">
           <Nav />

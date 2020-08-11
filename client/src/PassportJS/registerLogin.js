@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import {  Route, Redirect } from "react-router-dom";
-import M from "materialize-css";
+// import M from "materialize-css";
 
 function RegisterLogin() {
   const [email, setEmail] = useState("");

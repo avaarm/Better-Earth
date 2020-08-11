@@ -5,8 +5,8 @@
 
 .card-title{
     font-size: 12px !important;
-    margin-bottom: 0px;
-    padding-bottom: 10px !important;
+    padding-bottom: 5px !important;
+    background-color: #0f486f;
 
 }
 
@@ -14,6 +14,10 @@
     color: white;
 }
 
-/* .imgHeight {
-    height: 200px;
-} */
+.imgHeight {
+    width: 100%;
+}
+
+.material-icons{
+    position:relative !important;
+}

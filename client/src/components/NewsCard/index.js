@@ -3,7 +3,7 @@ import "./style.css";
 
 function NewsCard(props) {
   return (
-      <div className="col s12 m6 l3">
+      <div key={props.id} className="col s12 m6 l3">
         <div className="card medium">
           <div className="card-image">
             <img className="imgHeight" alt="" src={props.urlToImage} />
@@ -11,6 +11,7 @@ function NewsCard(props) {
             <a 
             className="linkColor"
             href={props.url}
+            title={props.url}
             rel="noopener noreferrer"
             target="_blank"
             > {props.title}</a>
@@ -22,6 +23,7 @@ function NewsCard(props) {
           <div className="card-action">
             <a 
             href={props.url}
+            title={props.url}
             rel="noopener noreferrer"
             target="_blank"
             >{props.source}</a>
