@@ -4,26 +4,26 @@ import Nav from "./components/Nav";
 import Input from "./components/Input";
 import Button from "./components/Button";
 import API from "./utils/API";
-import { RecipeList, RecipeListItem } from "./components/RecipeList";
+import { ProductList, ProductListItem } from "./components/ProductList";
 import { Container, Row, Col } from "./components/Grid";
 
 function App() {
 
-  const [recipes, setRecipes] = useState([]);
-  const [recipeSearch, setRecipeSearch] = useState("");
+  const [products, setProducts] = useState([]);
+  const [productSearch, setProductSearch] = useState("");
 
   const handleInputChange = event => {
     // Destructure the name and value properties off of event.target
     // Update the appropriate state
     const { value } = event.target;
-    setRecipeSearch(value);
+    setProductSearch(value);
   };
 
   const handleFormSubmit = event => {
-    // When the form is submitted, prevent its default behavior, get recipes update the recipes state
+    // When the form is submitted, prevent its default behavior, get products update the products state
     event.preventDefault();
-    API.getRecipes(recipeSearch)
-      .then(res => setRecipes(res.data))
+    API.getProducts(productSearch)
+      .then(res => setProducts(res.data))
       .catch(err => console.log(err));
   };
 
@@ -39,10 +39,10 @@ function App() {
                 <Row>
                   <Col size="xs-9 sm-10">
                     <Input
-                      name="RecipeSearch"
-                      value={recipeSearch}
+                      name="ProductSearch"
+                      value={productSearch}
                       onChange={handleInputChange}
-                      placeholder="Search For a Recipe"
+                      placeholder="Search For a Product"
                     />
                   </Col>
                   <Col size="xs-3 sm-2">
@@ -61,22 +61,23 @@ function App() {
         </Row>
         <Row>
           <Col size="xs-12">
-            {!recipes.length ? (
-              <h1 className="text-center">No Recipes to Display</h1>
+            {!products.length ? (
+              <h1 className="text-center">No Products to Display</h1>
             ) : (
-              <RecipeList>
-                {recipes.map(recipe => {
+              <ProductList>
+                {products.map(product => {
                   return (
-                    <RecipeListItem
-                      key={recipe.title}
-                      title={recipe.title}
-                      href={recipe.href}
-                      ingredients={recipe.ingredients}
-                      thumbnail={recipe.thumbnail}
+                    <ProductListItem
+                      category={product.catgeory}
+                      key={product.productName}
+                      title={product.title}
+                      href={product.href}
+                      summary={product.summary}
+                      thumbnail={product.thumbnail}
                     />
                   );
                 })}
-              </RecipeList>
+              </ProductList>
             )}
           </Col>
         </Row>

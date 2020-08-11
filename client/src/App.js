@@ -7,8 +7,10 @@ import Register from "./PassportJS/register"
 import Nav from "./components/Nav";
 import About from "./components/About";
 import FootprintCard from "./components/FootprintCard";
-// import FootprintHistory from "./components/FootprintHistory";
+import { StoreProvider } from "./utils/GlobalState";
 
+
+// not all have to be exact paths
 function App() {
   return (
     <Router>
@@ -17,6 +19,7 @@ function App() {
           <Nav />
           <MainContainer />
         </Route>
+        <StoreProvider>
         <Route exact path="/news">
           <Nav />
           <NewsTab />
@@ -37,6 +40,7 @@ function App() {
           <Nav />
           <Register />
         </Route>
+      </StoreProvider>
       </div>
     </Router>
   );
