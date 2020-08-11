@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import M from "materialize-css";
+// import M from "materialize-css";
 import axios from "axios";
 import "./style.css";
-import { Col, Row } from "react-materialize";
+import MainContainer from "../pages/MainContainer"
 
 
 function Register() {
@@ -54,7 +54,8 @@ function Register() {
   return (
     <div>
       {loggedIn ? (
-        <h1>Hi {name} </h1>
+        // <h1>Hi {name} </h1>
+        <MainContainer name={name} />
       ) :
       (
         <div className="container">

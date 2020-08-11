@@ -10,7 +10,7 @@ function About() {
     <Row>
       <Col m={14} s={20} l={25}>
         <CardPanel className="teal">
-          <div classname="container center">
+          <div className="container center">
             <h1 className="white-text center">Better Earth</h1>
             <div className="white-text center">
               Better Earth is an application that helps people find sustainable

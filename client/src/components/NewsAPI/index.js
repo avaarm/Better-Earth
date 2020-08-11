@@ -2,18 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-materialize";
 import NewsCard from "../NewsCard";
 import API from "../../utils/API";
-import NewsTab from "./newsTab";
 import "./style.css";
 
 function News(props) {
   const [news, setNews] = useState([]);
-  const [newsSearch, setNewsSearch] = useState("environment")
-  // toggling between 5 vs all the results
+  // const [newsSearch, setNewsSearch] = useState("environment")
+  // // toggling between 5 vs all the results
   const [seeAll, toggleSeeAll] = useState(false);
 
   useEffect(() => {
-    setNewsSearch(props.search)
-    loadNews(newsSearch);
+    // setNewsSearch(props.search)
+    loadNews(props.search);
   }, [props.search]);
 
   function loadNews(query) {
@@ -32,6 +31,42 @@ function News(props) {
     <Row>
       <Col>
           <Row>
+            <Col
+              // m={6}
+              s={12}
+            >
+              {!seeAll
+                ? news
+                    .slice(0, 4)
+                    .map((item, index) => (
+                      <NewsCard
+                        title={item.title}
+                        source={item.source.name}
+                        author={item.author}
+                        description={item.description}
+                        url={item.url}
+                        urlToImage={item.urlToImage}
+                        publishedAt={item.publishedAt}
+                        key={index}
+                      />
+                    ))
+                : news
+                    .slice(4, 8)
+                    .map((item, index) => (
+                      <NewsCard
+                        title={item.title}
+                        source={item.source.name}
+                        author={item.author}
+                        description={item.description}
+                        url={item.url}
+                        urlToImage={item.urlToImage}
+                        publishedAt={item.publishedAt}
+                        id={index}
+                      />
+                    ))}
+            </Col>
+          </Row>
+          <Row>
             <Col s={12} className="buttonCol">
               {/* can make a react router link here  */}
               {!seeAll ? (
@@ -49,43 +84,6 @@ function News(props) {
                   See Less
                 </button>
               )}
-            </Col>
-          </Row>
-
-          <Row>
-            <Col
-              // m={6}
-              s={12}
-            >
-              {!seeAll
-                ? news
-                    .slice(0, 4)
-                    .map((item, index) => (
-                      <NewsCard
-                        title={item.title}
-                        source={item.source.name}
-                        author={item.author}
-                        description={item.description}
-                        url={item.url}
-                        urlToImage={item.urlToImage}
-                        publishedAt={item.publishedAt}
-                        id={index}
-                      />
-                    ))
-                : news
-                    .slice(4, 8)
-                    .map((item, index) => (
-                      <NewsCard
-                        title={item.title}
-                        source={item.source.name}
-                        author={item.author}
-                        description={item.description}
-                        url={item.url}
-                        urlToImage={item.urlToImage}
-                        publishedAt={item.publishedAt}
-                        id={index}
-                      />
-                    ))}
             </Col>
           </Row>
       </Col>
