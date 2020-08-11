@@ -31,27 +31,6 @@ function News(props) {
     <Row>
       <Col>
           <Row>
-            <Col s={12} className="buttonCol">
-              {/* can make a react router link here  */}
-              {!seeAll ? (
-                <button
-                  className="waves-effect waves-light btn newsButton"
-                  onClick={handleToggleSeeAll}
-                >
-                  See More
-                </button>
-              ) : (
-                <button
-                  className="waves-effect waves-light btn newsButton"
-                  onClick={handleToggleSeeAll}
-                >
-                  See Less
-                </button>
-              )}
-            </Col>
-          </Row>
-
-          <Row>
             <Col
               // m={6}
               s={12}
@@ -85,6 +64,26 @@ function News(props) {
                         id={index}
                       />
                     ))}
+            </Col>
+          </Row>
+          <Row>
+            <Col s={12} className="buttonCol">
+              {/* can make a react router link here  */}
+              {!seeAll ? (
+                <button
+                  className="waves-effect waves-light btn newsButton"
+                  onClick={handleToggleSeeAll}
+                >
+                  See More
+                </button>
+              ) : (
+                <button
+                  className="waves-effect waves-light btn newsButton"
+                  onClick={handleToggleSeeAll}
+                >
+                  See Less
+                </button>
+              )}
             </Col>
           </Row>
       </Col>

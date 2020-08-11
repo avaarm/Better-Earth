@@ -15,11 +15,13 @@ function App() {
   return (
     <Router>
       <div>
+      <StoreProvider >
         <Route exact path="/">
           <Nav />
           <MainContainer />
+          
         </Route>
-        <StoreProvider>
+       
         <Route exact path="/news">
           <Nav />
           <NewsTab />

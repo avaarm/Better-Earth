@@ -16,7 +16,8 @@ function MainContainer(props) {
   return (
       <div>
         <Row>
-          <Col>
+          <Col
+            s={12}>
             <h2 className="center">Welcome {props.name ? (`${name}`):("to Better Earth!")}</h2>
           </Col>
         </Row>
