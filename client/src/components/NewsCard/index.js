@@ -3,7 +3,7 @@ import "./style.css";
 
 function NewsCard(props) {
   return (
-      <div className="col s12 m6 l3">
+      <div key={props.id} className="col s12 m6 l3">
         <div className="card medium">
           <div className="card-image">
             <img className="imgHeight" alt="" src={props.urlToImage} />
