@@ -10,7 +10,7 @@ function ContributorList() {
                 <li>
                   <a href="https://github.com/avaarm">
                     <img
-                      alt="arm"
+                      alt="armenuhi"
                       className="circle responsive-img"
                       src="https://avatars0.githubusercontent.com/u/48078730?s=400&u=7fe3acb496694f3b0acbfaafac8e640702662920&v=4"
                     />

@@ -3,30 +3,33 @@ const mongoose = require("mongoose");
 const ProductSchema = new mongoose.Schema({
   category: {
     type: String,
-    default: ""
+    default: "",
+  },
+  productName: {
+    type: String,
+    default: "",
   },
   title: {
     type: String,
     // required: false,
-
   },
   // url string for thumbnail image
   thumbnail: {
     type: String,
-    default: ""
+    default: "",
   },
   // url for Product web page - unique index
   href: {
     type: String,
     default: "",
-    unique: false
+    unique: false,
   },
   summary: {
     type: String,
-    default: ""
-  }
+    default: "",
+  },
 });
 
-const Product = mongoose.model("product", ProductSchema);
+const Product = mongoose.model("Product", ProductSchema);
 
 module.exports = Product;

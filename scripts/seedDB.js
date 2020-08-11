@@ -8,7 +8,7 @@ mongoose.connect(
 const productSeed = [
   {
     category: "Kitchen",
-    name: "Dish soap",
+    productName: "Dish soap",
     thumbnail: "",
     href: "https://www.blueland.com/collections/all/products/dish-soap-starter-set?gclid=CjwKCAjwjqT5BRAPEiwAJlBuBdPAOdyXK8qu299x3cbhg0dgars-ti0ZV1Q0dxTPt-9gGrSX3RxkKBoCIOQQAvD_BwE",
     summary: "Blueland ships a reusable bottle and tablets. All you have to do is fill your bottle with water. Drop in a cleaning or soap tablet and you are good to go. ",
@@ -16,7 +16,7 @@ const productSeed = [
   },
   {
     category: "Clothing",
-    name: "",
+    productName: "",
     thumbnail: "",
     href: "https://www.wearethought.com/?utm_source=Affiliate&utm_medium=LinkShare&utm_campaign=QFGLnEolOWg&utm_content=15&utm_term=UKNetwork&ranSiteID=QFGLnEolOWg-11xssrDxvPBTHP9fHEGLLg&siteID=QFGLnEolOWg-11xssrDxvPBTHP9fHEGLLg",
     summary: "",
@@ -24,7 +24,7 @@ const productSeed = [
   },
   {
     category: "Bathroom",
-    name: "",
+    productName: "",
     thumbnail: "",
     href: "https://www.blueland.com/pages/how-it-works",
     summary: "",
@@ -32,7 +32,7 @@ const productSeed = [
   },
   {
     category: "Shoes",
-    name: "",
+    productName: "",
     thumbnail: "",
     href: "",
     summary: "",
@@ -40,7 +40,7 @@ const productSeed = [
   },
   {
     category: "General House",
-    name: "",
+    productName: "",
     thumbnail: "",
     href: "",
     summary: "",
@@ -48,7 +48,7 @@ const productSeed = [
   },
   {
     category: "Accessories",
-    name: "",
+    productName: "",
     thumbnail: "",
     href: "",
     summary: "",
@@ -56,7 +56,7 @@ const productSeed = [
   },
   {
     category: "Storage",
-    name: "",
+    productName: "",
     thumbnail: "",
     href:"",
     summary: "",
@@ -64,7 +64,7 @@ const productSeed = [
   },
   {
     category: "Outdoor Gear",
-    name: "",
+    productName: "",
     thumbnail: "",
     href: "",
     summary: "",
@@ -72,7 +72,7 @@ const productSeed = [
   },
   {
     category: "Dryer Balls",
-    name: "",
+    productName: "",
     thumbnail: "",
     href: "",
     summary: "",
@@ -80,7 +80,7 @@ const productSeed = [
   },
   {
     category: "Produce Bags",
-    name: "",
+    productName: "",
     thumbnail: "",
     href: "",
     summary: "",
@@ -88,7 +88,7 @@ const productSeed = [
   },
   {
     category: "Food Storage Bags",
-    name: "",
+    productName: "",
     thumbnail: "",
     href: "",
     summary: "",
