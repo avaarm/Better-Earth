@@ -23,7 +23,7 @@ export default {
     return axios.get("/api/products");
   },
   // Gets the product with the given id
-  getProduct: function(id) {
+  getProductById: function(id) {
     return axios.get("/api/products/" + id);
   },
   // Deletes the products with the given id

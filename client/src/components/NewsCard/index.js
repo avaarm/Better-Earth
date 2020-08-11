@@ -11,6 +11,7 @@ function NewsCard(props) {
             <a 
             className="linkColor"
             href={props.url}
+            title={props.url}
             rel="noopener noreferrer"
             target="_blank"
             > {props.title}</a>
@@ -22,6 +23,7 @@ function NewsCard(props) {
           <div className="card-action">
             <a 
             href={props.url}
+            title={props.url}
             rel="noopener noreferrer"
             target="_blank"
             >{props.source}</a>
