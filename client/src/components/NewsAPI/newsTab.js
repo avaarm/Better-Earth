@@ -6,17 +6,11 @@ import "./style.css";
 import News from "./index"
 
 function NewsTab() {
-  const [newsSearch, setNewsSearch] = useState("Sustainable");
+  const [newsSearch, setNewsSearch] = useState("environment");
 
   useEffect(() => {
     console.log(newsSearch);
   }, [newsSearch]);
-
-  const newsSwitch = (event) => {
-    setNewsSearch("environmental");
-    console.log(newsSearch);
-    console.log(event.target.value);
-  };
 
   return (
     <Row>
@@ -27,7 +21,9 @@ function NewsTab() {
 
     <div>
       <ul className="tabs tabs-fixed-width tab-demo z-depth-1">
-        <li className="tab">
+        <li 
+        key="1"
+        className="tab">
           <a
             className="active"
             href="#test1"
@@ -38,7 +34,9 @@ function NewsTab() {
             Environmental
           </a>
         </li>
-        <li className="tab">
+        <li 
+        key="2"
+        className="tab">
           <a
             className="active"
             href="#test2"
@@ -49,7 +47,9 @@ function NewsTab() {
             Sustainability
           </a>
         </li>
-        <li className="tab ">
+        <li
+        key="3"
+        className="tab ">
           <a
             className="active"
             href="#test3"
@@ -60,7 +60,9 @@ function NewsTab() {
             Climate Change
           </a>
         </li>
-        <li className="tab">
+        <li 
+        key="4"
+        className="tab">
           <a
             className="active"
             href="#test4"
@@ -71,7 +73,9 @@ function NewsTab() {
             Charitable
           </a>
         </li>
-        <li className="tab">
+        <li
+        key="5"
+        className="tab">
           <a
             className="active"
             href="#test0"

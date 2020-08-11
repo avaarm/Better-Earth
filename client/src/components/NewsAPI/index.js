@@ -13,7 +13,7 @@ function News(props) {
 
   useEffect(() => {
     setNewsSearch(props.search)
-    loadNews(newsSearch);
+    loadNews(props.search);
   }, [props.search]);
 
   function loadNews(query) {

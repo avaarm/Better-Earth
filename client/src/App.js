@@ -13,7 +13,10 @@ function App() {
   return (
     <Router>
       <div>
-        <Route exact path="/" component={MainContainer} />
+        <Route exact path="/">
+          <Nav />
+          <MainContainer />
+        </Route>
         <Route exact path="/news">
           <Nav />
           <NewsAPI />

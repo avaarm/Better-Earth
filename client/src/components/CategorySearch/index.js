@@ -21,6 +21,7 @@ function CategorySearch() {
                 <Select
                 s={12}
                   id="Select-9"
+                
                   multiple
                   options={{
                     classes: "",
@@ -41,9 +42,9 @@ function CategorySearch() {
                   }}
                   value={[""]}
                 >
-                  <option disabled value="">
+                  {/* <option disabled value="">
                     Select Products :)
-                  </option>
+                  </option> */}
                   <option value="1">Kitchen </option>
                   <option value="2">Bathroom</option>
                   <option value="3">Clothing</option>
