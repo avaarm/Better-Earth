@@ -1,7 +1,13 @@
 .responsive-img {
-    float: left;
     width: 100px;
     height: 100px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.name {
+    padding-top:5px;
+    padding-bottom: 10px;
 }
