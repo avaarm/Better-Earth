@@ -43,7 +43,7 @@ function CategorySearch() {
                   value={[""]}
                 >
                   <option disabled value="">
-                    Select A Category of Products :)
+                 
                   </option>
                   <option value="1">Accessories</option>
                   <option value="2">Bathroom</option>
