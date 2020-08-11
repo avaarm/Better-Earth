@@ -12,6 +12,7 @@ export function ProductList({ children }) {
 // ProductListItem renders a list item containing data from the product call
 export function ProductListItem({
   category,
+  name,
   thumbnail,
   title,
   summary,
