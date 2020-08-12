@@ -1,9 +1,16 @@
 .greta {
     width:100%;
+    color: white;
 }
 
 .quote {
     color: white;
     font: bolder;
     
+}
+
+.sidebar {
+    color: white;
+    font: bolder;
+    font-size: 24px;
 }
