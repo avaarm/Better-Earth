@@ -3,6 +3,7 @@ import { Row, Col } from "react-materialize";
 import NewsCard from "../NewsCard";
 import API from "../../utils/API";
 import "./style.css";
+import axios from "axios";
 
 function News(props) {
   const [news, setNews] = useState([]);
@@ -11,14 +12,13 @@ function News(props) {
   const [seeAll, toggleSeeAll] = useState(false);
 
   useEffect(() => {
-    // setNewsSearch(props.search)
     loadNews(props.search);
   }, [props.search]);
 
   function loadNews(query) {
-    API.getNews(query)
+    axios.get("/api/news/getnews/" + query)
       .then((response) => {
-        setNews(response.data.articles);
+        setNews(response.data);
       })
       .catch((err) => console.log("error is caught" + err));
   }
