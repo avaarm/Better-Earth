@@ -73,8 +73,16 @@ const reducer = (state, action) => {
       loading: !state.loading
     };
 
+  case "LOAD_USER":
+    return {
+      ...state,
+      username: [...state.username],
+      loggedIn: [...state.loggedIn]
+    };
+
   default:
     return state;
+
   }
 };
 
@@ -89,7 +97,9 @@ const StoreProvider = ({ value = [], ...props }) => {
       summary: ""
     },
     favorites: [],
-    loading: false
+    loading: false,
+    username: "test",
+    loggedIn: false
   });
 
   return <Provider value={[state, dispatch]} {...props} />;
