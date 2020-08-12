@@ -6,6 +6,7 @@ const MongoStore = require("connect-mongo")(session)
 const mongoose = require("mongoose");
 const passport = require("./passport/setup");
 const auth = require("./routes/auth");
+const news = require("./routes/news");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -46,6 +47,7 @@ app.use(passport.session());
 
 // Routes
 app.use("/api/auth", auth);
+app.use("/api/news", news);
 app.get("/", (req, res) => res.send("Howdy; auth res.send"));
 
 
