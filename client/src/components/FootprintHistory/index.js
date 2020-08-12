@@ -4,6 +4,7 @@ import "./style.css";
 
 function FootprintHistory(props) {
 
+  const result = props.data;
   return (
     <Row>
       <Col
@@ -13,11 +14,47 @@ function FootprintHistory(props) {
       >
         <CardPanel className="orangeCard">
           <span className="black-text">
-            <p className="location">You chose: {props.data.input_location}</p>
-            <p className="size">The size of your household: {props.data.input_size}</p>
-            <p className="population">Population of your zip code: {props.data.input_population}</p>
-            <p className="mode">Type of location chosen: {props.data.input_location_mode}</p>
-            <p className="income">Income: {props.data.input_income}</p>
+            <p className="zip-code">Inputted zip code: {result.input_location}</p>
+            <p className="population">Population of your zip code: {result.input_population}</p>
+            <p className="house-area">The average living space area of a house in this zip code is {result.input_footprint_housing_squarefeet} square feet.</p>
+          </span>
+          <span className="black-text">
+            <table className="responsive-table striped">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Average consumption in household</th>
+                  <th>Possible action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Electricity</td>
+                  <td>${result.input_footprint_housing_electricity_dollars}, or {Math.round(result.input_footprint_housing_electricity_kwh)} kWh per year</td>
+                  <td>Turn down winter thermostat by {result.input_takeaction_thermostat_winter_daydegrees} degrees during the day and {result.input_takeaction_thermostat_winter_nightdegrees} at night</td>
+                </tr>
+                <tr>
+                  <td>Electricity</td>
+                  <td>${result.input_footprint_housing_electricity_dollars}, or {Math.round(result.input_footprint_housing_electricity_kwh)} kWh per year</td>
+                  <td>Turn down winter thermostat by {result.input_takeaction_thermostat_winter_daydegrees} degrees during the day and {result.input_takeaction_thermostat_winter_nightdegrees} at night</td>
+                </tr>
+                <tr>
+                  <td>Electricity</td>
+                  <td>${result.input_footprint_housing_electricity_dollars}, or {Math.round(result.input_footprint_housing_electricity_kwh)} kWh per year</td>
+                  <td>Turn down winter thermostat by {result.input_takeaction_thermostat_winter_daydegrees} degrees during the day and {result.input_takeaction_thermostat_winter_nightdegrees} at night</td>
+                </tr>
+                <tr>
+                  <td>Electricity</td>
+                  <td>${result.input_footprint_housing_electricity_dollars}, or {Math.round(result.input_footprint_housing_electricity_kwh)} kWh per year</td>
+                  <td>Turn down winter thermostat by {result.input_takeaction_thermostat_winter_daydegrees} degrees during the day and {result.input_takeaction_thermostat_winter_nightdegrees} at night</td>
+                </tr>
+                <tr>
+                  <td>Electricity</td>
+                  <td>${result.input_footprint_housing_electricity_dollars}, or {Math.round(result.input_footprint_housing_electricity_kwh)} kWh per year</td>
+                  <td>Turn down winter thermostat by {result.input_takeaction_thermostat_winter_daydegrees} degrees during the day and {result.input_takeaction_thermostat_winter_nightdegrees} at night</td>
+                </tr>
+              </tbody>
+            </table>
           </span>
         </CardPanel>
       </Col>
