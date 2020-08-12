@@ -60,7 +60,13 @@ The following installations are needed for this package:
 2. npm i  
 3. npm install node
     
-Once in the correct directory (server.js), run "node server.js"
+Once in the correct directory (server.js), run "npm start"
+
+Deployment Instructions
+1. git add .
+2. git commit -m "a commit message"
+3. git push heroku master
+4. heroku open
 
 ## Instructions
 
