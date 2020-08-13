@@ -11,10 +11,15 @@ function MainContainer(props) {
   // const { state, dispatch } = useStoreContext();
   // console.log(state);
   const [name, setName] = useState("");
+  const sessionName = sessionStorage.getItem("Name");
   // console.log(state.username)
   useEffect(() => {
-    setName(props.name)
-  }, [name]);
+    // setName(props.name)
+    setName(sessionName)
+    console.log(sessionName)
+  }, [sessionName]);
+
+  
 
   return (
     <div>
@@ -24,7 +29,7 @@ function MainContainer(props) {
         <Col
         s={12}>
           <h2 className="center">
-            Welcome {props.name ? (`${name}`):("to Better Earth!")}
+            Welcome {name ? (`${name}`):("to Better Earth!")}
           </h2>
         </Col>
       </Row>
