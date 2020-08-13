@@ -24,32 +24,60 @@ function Register() {
 
     const userData = {
       name: name,
-      email: email,
+      username: email,
       password: password,
     };
-    // routing needs to be done here
+
+    /////////// VERSION 2 ///////////////////
     axios
-      .post("/api/auth/newregister", userData)
-    //   .post("/api/auth/freshregister", userData)
-      .then((res) => {
-          const username = res.data.name;
-          console.log("Hi " + username + "!")
-          setName(username);
-        if (res.status === 200) {
-          console.log("successful login");
-          setLoggedIn(true);
-          // setName("");
-          // setPassword("");
-          // setEmail("");
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log(err.response);
-        setLoggedIn(false);
-        alert("Email and/or Password are not correct. Please try again.");
-      });
-  };
+    .post("/api/signup", userData)
+    .then((res) => {
+      console.log(res.config.data)
+        const resName = res.data.name;
+        console.log("Hi " + resName + "!")
+        // console.log("userID" + res.user.id)
+        setName(resName);
+      if (res.status === 200) {
+        console.log("successful login");
+        setLoggedIn(true);
+        // setName("");
+        // setPassword("");
+        // setEmail("");
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      console.log(err.response);
+      setLoggedIn(false);
+      alert("Email and/or Password are not correct. Please try again.");
+    });
+};
+
+
+    /////////////////////////////////////////
+    // routing needs to be done here
+  //   axios
+  //     .post("/api/auth/newregister", userData)
+  //   //   .post("/api/auth/freshregister", userData)
+  //     .then((res) => {
+  //         const username = res.data.name;
+  //         console.log("Hi " + username + "!")
+  //         setName(username);
+  //       if (res.status === 200) {
+  //         console.log("successful login");
+  //         setLoggedIn(true);
+  //         // setName("");
+  //         // setPassword("");
+  //         // setEmail("");
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       console.log(err.response);
+  //       setLoggedIn(false);
+  //       alert("Email and/or Password are not correct. Please try again.");
+  //     });
+  // };
 
   return (
     <div>
