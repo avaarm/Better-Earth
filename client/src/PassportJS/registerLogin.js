@@ -12,13 +12,15 @@ function RegisterLogin() {
     event.preventDefault();
 
     const userData = {
-      email: email,
+      username: email,
       password: password
     };
     // routing needs to be done here
     axios
-      .post("/api/auth/register_login", userData)
+      // .post("/api/auth/register_login", userData)
+      .post("/api/login", userData)
       .then((res) => {
+        console.log("this is the client side response: " + res);
           if(res.status === 200){
           console.log("successful login");
           setLoggedIn(true);
