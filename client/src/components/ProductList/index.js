@@ -1,6 +1,6 @@
 import React from "react";
 import Thumbnail from "../Thumbnail";
-import { Container, Row, Col } from "../Grid";
+import { Container, Row, Col } from "react-materialize";
 
 // Exporting both ProductList and ProductListItem from this file
 
@@ -26,7 +26,9 @@ export function ProductListItem({
             <Thumbnail src={thumbnail || "https://placehold.it/300x300"} />
           </Col>
           <Col size="xs-8 sm-9">
+            <h3>{category}</h3>
             <h3>{title}</h3>
+            <h3>{name}</h3>
             <p>Information: {summary}</p>
             <a rel="noreferrer noopener" target="_blank" href={href}>
               Go to product!

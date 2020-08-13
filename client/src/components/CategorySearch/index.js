@@ -41,8 +41,7 @@ function CategorySearch() {
                   s={12}
                   id="prod-type"
                   name="ProductSearch"
-                  value={productSearch}
-                  onChange={handleInputChange}
+
                   multiple
                   options={{
                     classes: "",
@@ -61,7 +60,9 @@ function CategorySearch() {
                       outDuration: 250,
                     },
                   }}
-                  value={[""]}
+                  value={[""]}                  
+                  // value={productSearch}
+                  onChange={handleInputChange}
                 >
                   <option disabled value=""></option>
                   <option value="1">Accessories</option>
