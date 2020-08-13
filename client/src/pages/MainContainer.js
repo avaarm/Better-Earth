@@ -30,7 +30,7 @@ function MainContainer(props) {
       </Row>
       <CategorySearch /> 
       <ResultList />
-      <NewsTab />
+      {/* <NewsTab /> */}
       <FootprintCard />
     </div>
   );
