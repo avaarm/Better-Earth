@@ -32,17 +32,16 @@ function Register() {
     axios
     .post("/api/signup", userData)
     .then((res) => {
+      console.log(res)
       console.log(res.config.data)
-        const resName = res.data.name;
+      //setting name this way removes quotations when getItem later
+        const resName = `${res.data.name}`;
         console.log("Hi " + resName + "!")
-        // console.log("userID" + res.user.id)
+        sessionStorage.setItem("Name", resName);
         setName(resName);
       if (res.status === 200) {
         console.log("successful login");
         setLoggedIn(true);
-        // setName("");
-        // setPassword("");
-        // setEmail("");
       }
     })
     .catch((err) => {

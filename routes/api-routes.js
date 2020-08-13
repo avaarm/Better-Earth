@@ -46,7 +46,8 @@ const bcrypt = require("bcryptjs");
               name: req.body.name,
             });
             await newUser.save();
-            res.send("User Created");
+            // res.send("User Created");
+            res.json(req.body);
           }
         });
       });
