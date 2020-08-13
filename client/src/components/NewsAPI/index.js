@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-materialize";
 import NewsCard from "../NewsCard";
-import API from "../../utils/API";
-import "./style.css";
 import axios from "axios";
+import "./style.css";
 
 function News(props) {
   const [news, setNews] = useState([]);
@@ -36,9 +35,7 @@ function News(props) {
               s={12}
             >
               {!seeAll
-                ? news
-                    .slice(0, 4)
-                    .map((item, index) => (
+                ? news.slice(0, 4).map((item, index) => (
                       <NewsCard
                         title={item.title}
                         source={item.source.name}
@@ -68,7 +65,6 @@ function News(props) {
           </Row>
           <Row>
             <Col s={12} className="buttonCol">
-              {/* can make a react router link here  */}
               {!seeAll ? (
                 <button
                   className="waves-effect waves-light btn newsButton"

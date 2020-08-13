@@ -1,3 +1,4 @@
+// we can get rid of one of these -AA
 const router = require("express").Router();
 const axios = require("axios");
 
@@ -14,5 +15,8 @@ router.get("/getnews/:query", (req, res) => {
         })
         .catch(err => res.send({err}))
 })
+
+
+
 
 module.exports = router;

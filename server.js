@@ -19,9 +19,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// app.use(require("./routes/api/news.js"));
-// Add routes, both API and view
-
+app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/goodearth", { useNewUrlParser: true,
@@ -48,8 +46,8 @@ app.use(passport.session());
 // Routes
 app.use("/api/auth", auth);
 app.use("/api/news", news);
-app.get("/", (req, res) => res.send("Howdy; auth res.send"));
 
+app.get("/", (req, res) => res.send("Howdy; auth res.send"));
 
 
 // Start the API server

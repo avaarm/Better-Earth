@@ -12,6 +12,7 @@ export default {
     // return axios.get(`/api/news`);
   },
 
+
   ////////////coolClimate API//////////////////////
   getFootprint: function (inputType, input, income, householdSize) {
     const APP_KEY = process.env.REACT_APP_COOLCLIMATE_APIKEY;
@@ -23,7 +24,7 @@ export default {
   },
 
   // Gets all products
-  getProduct: function () {
+  getProducts: function () {
     return axios.get("/api/products");
   },
   // Gets the product with the given id

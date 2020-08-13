@@ -2,10 +2,10 @@ import React, { useEffect, useState, useContext }  from "react";
 import CategorySearch from "../components/CategorySearch";
 import NewsTab from "../components/NewsAPI/newsTab";
 import FootprintCard from "../components/FootprintCard";
-import FooterBar from "../components/FooterBar"
+// import FooterBar from "../components/FooterBar"
 import { Col, Row } from "react-materialize";
 import ResultList from "../components/ResultList";
-import { StoreProvider, useStoreContext } from "../utils/GlobalState";
+// import { StoreProvider, useStoreContext } from "../utils/GlobalState";
 
 function MainContainer(props) {
   // const { state, dispatch } = useStoreContext();

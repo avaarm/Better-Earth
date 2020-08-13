@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, CardPanel, Select, Button } from "react-materialize";
+import API from "../../utils/API";
+import { ProductList, ProductListItem } from "../ProductList";
 import "./style.css";
-// import { StoreProvider, useStoreContext } from "../../utils/GlobalState";
 
-// anything that is materialize react specific has to be imported
 
 function CategorySearch() {
+  const [products, setProducts] = useState([]);
+  const [productSearch, setProductSearch] = useState("");
+
+  const handleInputChange = (event) => {
+    // Destructure the name and value properties off of event.target
+    // Update the appropriate state
+    const { value } = event.target;
+    setProductSearch(value);
+  };
+
+  const handleFormSubmit = (event) => {
+    // When the form is submitted, prevent its default behavior, get products update the products state
+    event.preventDefault();
+    API.getProducts(productSearch)
+      .then((res) => setProducts(res.data))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <Row className="outerRow">
       <Col s={12}>
@@ -22,6 +40,9 @@ function CategorySearch() {
                 <Select
                   s={12}
                   id="prod-type"
+                  name="ProductSearch"
+                  value={productSearch}
+                  onChange={handleInputChange}
                   multiple
                   options={{
                     classes: "",
@@ -42,9 +63,7 @@ function CategorySearch() {
                   }}
                   value={[""]}
                 >
-                  <option disabled value="">
-                 
-                  </option>
+                  <option disabled value=""></option>
                   <option value="1">Accessories</option>
                   <option value="2">Bathroom</option>
                   <option value="3">Clothing</option>
@@ -60,6 +79,9 @@ function CategorySearch() {
                   <span className="white-text"></span>
                 </CardPanel>
                 <Button
+                  onClick={handleFormSubmit}
+                  type="success"
+                  className="productButton"
                   node="button"
                   style={{
                     marginRight: "5px",
@@ -70,6 +92,24 @@ function CategorySearch() {
                 </Button>
               </Col>
             </Row>
+            {!products.length ? (
+              <h1 className="text-center">No Products to Display</h1>
+            ) : (
+              <ProductList>
+                {products.map(product => {
+                  return (
+                    <ProductListItem
+                      category={product.catgeory}
+                      key={product.productName}
+                      title={product.title}
+                      href={product.href}
+                      summary={product.summary}
+                      thumbnail={product.thumbnail}
+                    />
+                  );
+                })}
+              </ProductList>
+            )}
           </span>
         </CardPanel>
       </Col>
