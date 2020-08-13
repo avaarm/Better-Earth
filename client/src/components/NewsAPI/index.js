@@ -31,9 +31,9 @@ function News(props) {
       <Col>
           <Row>
             <Col
-              // m={6}
+              m={6}
               s={12}
-            >
+            />
               {!seeAll
                 ? news.slice(0, 4).map((item, index) => (
                       <NewsCard
@@ -80,8 +80,8 @@ function News(props) {
                   See Less
                 </button>
               )}
-            </Col>
-          </Row>
+            </Col> 
+          </Row>  
       </Col>
     </Row>
   );
