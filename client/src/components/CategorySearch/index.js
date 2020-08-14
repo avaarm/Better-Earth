@@ -60,8 +60,8 @@ function CategorySearch() {
                       outDuration: 250,
                     },
                   }}
-                  value={[""]}                  
-                  // value={productSearch}
+                  // value={[""]}                  
+                  value={productSearch}
                   onChange={handleInputChange}
                 >
                   <option disabled value=""></option>
@@ -97,7 +97,7 @@ function CategorySearch() {
               <h1 className="text-center">No Products to Display</h1>
             ) : (
               <ProductList>
-                {products.map(product => {
+                {products.slice(0, 4).map(product => {
                   return (
                     <ProductListItem
                       category={product.catgeory}
