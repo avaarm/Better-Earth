@@ -9,22 +9,26 @@ import About from "./components/About";
 import FootprintCard from "./components/FootprintCard";
 import { StoreProvider } from "./utils/GlobalState";
 import FooterBar from "./components/FooterBar";
+import "./style.css";
 
 // not all have to be exact paths
 function App() {
   return (
-    <Router>
-      <Nav />
-      <StoreProvider >
-        <Route exact path="/" component={MainContainer} />
-        <Route exact path="/news" component={NewsTab} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/footprintCard" component={FootprintCard} />
-        <Route exact path="/login" component={RegisterLogin} />
-        <Route exact path="/register" component={Register} />
-      </StoreProvider>
-      <FooterBar />
-    </Router>
+    <div className="background">
+      <Router >
+        <Nav />
+        <StoreProvider >
+          <Route exact path="/" component={MainContainer} />
+          <Route exact path="/news" component={NewsTab} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/footprintCard" component={FootprintCard} />
+          <Route exact path="/login" component={RegisterLogin} />
+          <Route exact path="/register" component={Register} />
+        </StoreProvider>
+        <FooterBar />
+      </Router>
+    </div>
+
   );
 }
 
