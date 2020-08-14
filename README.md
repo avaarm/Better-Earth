@@ -60,7 +60,13 @@ The following installations are needed for this package:
 2. npm i  
 3. npm install node
     
-Once in the correct directory (server.js), run "node server.js"
+Once in the correct directory (server.js), run "npm start"
+
+Deployment Instructions
+1. git add .
+2. git commit -m "a commit message"
+3. git push heroku master
+4. heroku open
 
 ## Instructions
 
@@ -93,6 +99,13 @@ IndexedDB is a low-level API for client-side storage of significant amounts of s
 
 1. Create a db.js file in the public folder
 2. Copy and analyze the code I have in my db.js file 
+
+
+## Team Members
+* Armenuhi Avanesyan
+* Jeffrey Adamo
+* Vinh Mao
+* Tyler McBride
 
 
 ## Acknowledgements

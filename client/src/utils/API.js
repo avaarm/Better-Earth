@@ -1,20 +1,47 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books");
+  ////////NEWS API////////////////////
+  // getNews: function (search) {
+  //   const query = search;
+  //   return axios.get("/api/news", {
+  //     params: {
+  //       q: query,
+  //     },
+  //   });
+  //   // return axios.get(`/api/news`);
+  // },
+
+  ////////CoolClimate API////////////////////
+  getFootprint: function(inputType, input, income, householdSize) {
+    const query1 = inputType;
+    const query2 = input;
+    const query3 = income;
+    const query4 = householdSize;
+    return axios.get("/api/footprint", {
+      params: {
+        inputType: query1,
+        input: query2,
+        income: query3,
+        householdSize: query4
+      }
+    });
   },
-  // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
+
+  // Gets all products
+  getProducts: function () {
+    return axios.get("/api/products/");
   },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
+  // Gets the product with the given id
+  getProductById: function (id) {
+    return axios.get("/api/products/" + id);
   },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/books", bookData);
-  }
+  // Deletes the products with the given id
+  deleteProduct: function (id) {
+    return axios.delete("/api/products/" + id);
+  },
+  // Saves a products to the database
+  // saveProduct: function (productData) {
+  //   return axios.post("/api/products", productData);
+  // },
 };
