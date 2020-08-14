@@ -5,12 +5,12 @@ import { Container, Row, Col, CardTitle, Card, Icon } from "react-materialize";
 // Exporting both ProductList and ProductListItem from this file
 
 // ProductList renders a list item
-export function ProductList({ children }) {
+function ProductList({ children }) {
   return <ul className="list-group">{children}</ul>;
 }
 
 // ProductListItem renders a list item containing data from the product call
-export function ProductListItem({
+function ProductListItem({
   category,
   name,
   thumbnail,
@@ -46,7 +46,7 @@ export function ProductListItem({
     </li>
   );
 }
-
+export { ProductList, ProductListItem };
 // import React from "react";
 // import Thumbnail from "../Thumbnail";
 // import { Container, Row, Col } from "react-materialize";
