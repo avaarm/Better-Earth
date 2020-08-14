@@ -54,7 +54,7 @@ app.use("/api", apiRoutes);
 // app.use("/api/news", news);
 app.get("/", (req, res) => res.send("Howdy; auth res.send"));
 
-
+// app.use(routes);
 
 // Start the API server
 app.listen(PORT, function() {
