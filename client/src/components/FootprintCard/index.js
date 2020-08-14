@@ -46,7 +46,7 @@ function FootprintCard() {
 
   // Calls the CoolClimate API and loads the necessary data
   function loadData(inputType, input, householdIncome, householdSize) {
-    axios.get("/api/footprint/getfootprint/" + inputType + "/" + input + "/" + householdIncome + "/" + householdSize).then(res => {
+    axios.get("/api/getfootprint/" + inputType + "/" + input + "/" + householdIncome + "/" + householdSize).then(res => {
       const jsonData = parser.parse(res.data, options);
       console.log(jsonData.response);
       setFootprint(jsonData.response);
