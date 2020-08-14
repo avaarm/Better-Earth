@@ -60,36 +60,36 @@ router.get("/getnews/:query", (req, res) => {
 
 // Matches with "/api/products"
 // router
-  // .route("/")
-  // .get(productsController.findAll)
-  // .post(productsController.create);
+  .route("/products")
+  .get(productsController.findAll)
+  .post(productsController.create);
 
-router.get("/products", (req, res) => {
-  productsController.findAll
-})
+// router.get("/products", (req, res) => {
+//   productsController.findAll
+// })
 
-router.post("/products", (req, res) => {
-  productsController.create
-})
+// router.post("/products", (req, res) => {
+//   productsController.create
+// })
 
 // Matches with "/api/products/:id"
-// router
-  // .route("/:id")
-  // .get(productsController.findById)
-  // .put(productsController.update)
-  // .delete(productsController.remove);
+router
+  .route("/products:id")
+  .get(productsController.findById)
+  .put(productsController.update)
+  .delete(productsController.remove);
 
-router.get("/products/:id", (req, res) => {
-  productsController.findById
-})
+// router.get("/products/:id", (req, res) => {
+//   productsController.findById
+// })
 
-router.put("/products/:id", (req, res) => {
-  productsController.update
-})
+// router.put("/products/:id", (req, res) => {
+//   productsController.update
+// })
 
-router.delete("/products/:id", (req, res) => {
-  productsController.remove
-})
+// router.delete("/products/:id", (req, res) => {
+//   productsController.remove
+// })
 
 router.get("/getfootprint/:inputType/:input/:income/:householdSize", (req, res) => {
   const inputType = req.params.inputType;
