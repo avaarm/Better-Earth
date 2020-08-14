@@ -1,16 +1,27 @@
 .greta {
     width:100%;
-    color: white;
+    /* color: black; */
+    border: none
+
 }
 
 .quote {
-    color: white;
+    /* color: black; */
     font: bolder;
-    
+    border: none
 }
 
 .sidebar {
-    color: white;
+    color: black;
     font: bolder;
     font-size: 24px;
+}
+
+.outerCard {
+    margin: 15px auto 0px auto;
+    background-color: #fccf43;
+}
+
+hr {
+    border-color: black;
 }
