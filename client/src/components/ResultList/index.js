@@ -25,7 +25,7 @@ function ResultList() {
 
   const getProducts = () => {
     dispatch({ type: LOADING });
-    API.getProduct()
+    API.getProducts()
       .then(results => {
         dispatch({
           type: UPDATE_PRODUCTS,
