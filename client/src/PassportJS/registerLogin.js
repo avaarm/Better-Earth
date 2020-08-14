@@ -10,7 +10,8 @@ function RegisterLogin() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-
+    sessionStorage.removeItem("Name");
+    sessionStorage.removeItem("Id");
     const userData = {
       username: email,
       password: password

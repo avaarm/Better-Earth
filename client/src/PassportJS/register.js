@@ -20,6 +20,8 @@ function Register() {
 
   const onSubmit = (event) => {
     event.preventDefault();
+    sessionStorage.removeItem("Name");
+    sessionStorage.removeItem("Id");
     document.getElementById("myForm").reset();
 
     const userData = {
@@ -33,9 +35,8 @@ function Register() {
     .post("/api/signup", userData)
     .then((res) => {
       console.log(res)
-      console.log(res.config.data)
       //setting name this way removes quotations when getItem later
-        const resName = `${res.data.name}`;
+        const resName = `${res.data}`;
         console.log("Hi " + resName + "!")
         sessionStorage.setItem("Name", resName);
         setName(resName);
