@@ -3,7 +3,7 @@ import CategorySearch from "../components/CategorySearch";
 import NewsTab from "../components/NewsAPI/newsTab";
 import FootprintCard from "../components/FootprintCard";
 import { Col, Row } from "react-materialize";
-import ResultList from "../components/ResultList";
+import ProductList from "../components/ProductList";
 
 function MainContainer() {
   const [name, setName] = useState("");
@@ -23,7 +23,6 @@ function MainContainer() {
         </Col>
       </Row>
       <CategorySearch /> 
-      <ResultList />
       <NewsTab />
       <FootprintCard />
     </div>
