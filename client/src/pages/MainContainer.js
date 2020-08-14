@@ -3,6 +3,7 @@ import CategorySearch from "../components/CategorySearch";
 import NewsTab from "../components/NewsAPI/newsTab";
 import FootprintCard from "../components/FootprintCard";
 import { Col, Row } from "react-materialize";
+import "./style.css";
 
 function MainContainer() {
   const [name, setName] = useState("");
@@ -16,7 +17,7 @@ function MainContainer() {
       <Row>
         <Col
         s={12}>
-          <h2 className="center">
+          <h2 className="center title">
             Welcome {name ? (`${name}`):("to Better Earth!")}
           </h2>
         </Col>
