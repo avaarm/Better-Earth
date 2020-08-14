@@ -40,12 +40,17 @@ router.post("/signup", (req, res) => {
   });
 });
 
+router.get('/logout', function(req, res){
+  req.logout();
+  res.json("logout")
+});
+
 router.get("/getnews/:query", (req, res) => {
   const query = req.params.query
   const APIKEY_NEWS = process.env.REACT_APP_APIKEY_NEWS;
   axios
     .get(
-        `https://newsapi.org/v2/everything?q=${query}&apiKey=${APIKEY_NEWS}&language=en&from=2020-08-01&sortBy=relevancy,publishedAt&url=true&excludeDomains=seekingalpha.com,freerepublic.com`
+        `https://newsapi.org/v2/everything?q=${query}&apiKey=${APIKEY_NEWS}&language=en&from=2020-08-01&sortBy=relevancy,publishedAt&url=true&excludeDomains=seekingalpha.com,freerepublic.com,business2community.com`
       )
       .then(response => {
       res.send(response.data.articles)

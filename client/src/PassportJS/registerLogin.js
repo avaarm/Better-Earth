@@ -29,7 +29,7 @@ function RegisterLogin() {
           if(res.status === 200){
           console.log("successful login");
           setLoggedIn(true);
-        }
+        } 
         }
       )
       .catch((err) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-materialize";
 import NewsCard from "../NewsCard";
-import API from "../../utils/API";
+// import API from "../../utils/API";
 import "./style.css";
 import axios from "axios";
 

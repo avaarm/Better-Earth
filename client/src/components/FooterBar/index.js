@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer } from "react-materialize";
+// import { Footer } from "react-materialize";
 import "./style.css";
 import Wave3 from "./wave3.svg"
 import ContributorList from "../ContributorList";
