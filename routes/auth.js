@@ -28,6 +28,7 @@ router.post("/register_login", (req, res, next) => {
 // trying out register only
 router.post("/newregister", (req, res, next) => {
     const name = req.body.name
+    console.log(name)
     passport.authenticate("local", function(err, user, info) {
         if (err) {
             return res.status(400).json({ errors: err });
@@ -40,11 +41,11 @@ router.post("/newregister", (req, res, next) => {
                 return res.status(400).json({ errors: err });
             }
             // after authentication, entering name to user in
-            db.User.updateOne({_id: user.id}, { $set: {name: name}},
-                function(err, res) {
-                    if (err) throw err;
-                    console.log("user name should be in database");
-                })
+            // db.User.updateOne({_id: user.id}, { $set: {name: name}},
+            //     function(err, res) {
+            //         if (err) throw err;
+            //         console.log("user name should be in database");
+            //     })
             return (
                 // res.status(200).json({ success: `logged in ${user.id}` })
                 res.status(200).json({ name: name })
