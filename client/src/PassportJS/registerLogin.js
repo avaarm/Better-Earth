@@ -10,19 +10,26 @@ function RegisterLogin() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-
+    sessionStorage.removeItem("Name");
+    sessionStorage.removeItem("Id");
     const userData = {
-      email: email,
+      username: email,
       password: password
     };
     // routing needs to be done here
     axios
-      .post("/api/auth/register_login", userData)
+      // .post("/api/auth/register_login", userData)
+      .post("/api/login", userData)
       .then((res) => {
+        console.log(res);
+        const resName = `${res.data.name}`;
+        const resId = `${res.data._id}`;
+        sessionStorage.setItem("Name", resName);
+        sessionStorage.setItem("Id", resId);
           if(res.status === 200){
           console.log("successful login");
           setLoggedIn(true);
-        }
+        } 
         }
       )
       .catch((err) => {
