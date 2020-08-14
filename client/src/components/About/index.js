@@ -8,22 +8,23 @@ import "./style.css";
 
 function About() {
   return (
+    
     <Row>
       <Col m={14} s={20} l={25}>
-        <CardPanel className="teal">
+        <CardPanel className="outerRow">
           <Row>
             <Col className="zip" s={4} l={4}>
-              <h3 className="white-text center">Our Mission</h3>
+              <h3 className="center">Our Mission</h3>
             </Col>
           </Row>
           <hr />
           <Row>
             <Col s={3} l={3}></Col>
             <Col s={6} l={6}>
-              <h6 className="white-text center">
+              <h6 className="center">
                 Sustainable alternatives to everyday products exist, we’ll help you find the best ones
             </h6>
-              {/* <div className="white-text center">
+              {/* <div className="center">
               Better Earth is an application that helps people find sustainable
               alternative to everyday products, such as clothing and household
               goods. We also provide the latest news on the environment as well
