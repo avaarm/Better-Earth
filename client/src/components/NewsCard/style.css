@@ -1,0 +1,23 @@
+/* .card-image{
+    height: 200px;
+    overflow: hidden;
+} */
+
+.card-title{
+    font-size: 12px !important;
+    padding-bottom: 5px !important;
+    background-color: #0f486f;
+
+}
+
+.linkColor{
+    color: white;
+}
+
+.imgHeight {
+    width: 100%;
+}
+
+.material-icons{
+    position:relative !important;
+}

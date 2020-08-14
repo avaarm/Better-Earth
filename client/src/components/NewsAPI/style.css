@@ -1,0 +1,49 @@
+.backColor{
+    text-align: center;
+    color:#0f486f;
+    font-family: "cooper black"
+}
+
+.newsButton {
+    background-color:#0f486f !important; 
+    color: white !important;
+    float: right;
+   
+}
+
+.card-title {
+    font-weight: bold !important;
+    padding: 5px 8px 5px !important;
+    float: top;
+    font-size: 15px !important;
+    font-family: "Helvetica";
+    margin: 0px 15px 5px 15px !important;
+    
+}
+
+.card-content{
+    padding: 12px !important;
+    font-family: "Poynter" !important;
+}
+
+
+.card-action{
+    padding: 8px 24px !important;
+}
+
+.buttonCol{
+    padding-right: 21px !important;
+}
+
+.card-panel{
+    background-color: #fccf43;
+}
+.tabs{
+    background-color: #0f486f;
+    font-family: "helvetica";
+    
+}
+.active{
+    color: white !important;
+    
+}

@@ -1,0 +1,20 @@
+/* .sidenav-trigger {
+    position: fixed;
+    left: 1;
+    right: 0;
+} */
+.material-icons {
+    position: fixed;
+    left: 1;
+    right: 0; 
+}
+
+Nav {
+    /* background-image: url("waves.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top; */
+    background: #0f486f;
+
+
+}
