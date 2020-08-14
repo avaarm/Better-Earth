@@ -7,8 +7,8 @@ import {
   Button,
 } from "react-materialize";
 import "./style.css";
-import API from "../../utils/API";
 import FootprintHistory from "../FootprintHistory";
+import axios from "axios";
 
 const parser = require("fast-xml-parser");
 const he = require("he");
@@ -44,12 +44,12 @@ function FootprintCard() {
   const [displayResults, setDisplayResults] = useState(false);
 
   // Calls the CoolClimate API and loads the necessary data
-  function loadData() {
-    const inputType = "1";
-    const input = zipCode;
-    const income = householdIncome;
-    const size = householdSize;
-    API.getFootprint(inputType, input, income, size).then(res => {
+  function loadData(inputType, zipCode, householdIncome, householdSize) {
+    // const inputType = "1";
+    // const input = zipCode;
+    // const income = householdIncome;
+    // const size = householdSize;
+    axios.get("/api/footprint/getfootprint/" + inputType + "/" + zipCode + "/" + householdIncome + "/" + householdSize).then(res => {
       const jsonData = parser.parse(res.data, options);
       console.log(jsonData.response);
       setFootprint(jsonData.response);
@@ -59,7 +59,8 @@ function FootprintCard() {
   // form submit handler
   function handleClickSubmit(event) {
     event.preventDefault();
-    loadData();
+    const inputType = "1";
+    loadData(inputType, zipCode, householdIncome, householdSize);
     setDisplayResults(true);
   }
 

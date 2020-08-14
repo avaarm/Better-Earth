@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const passport = require("./passport/setup");
 const auth = require("./routes/auth");
 const news = require("./routes/news");
+const footprint = require("./routes/footprint");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -48,6 +49,7 @@ app.use(passport.session());
 // Routes
 app.use("/api/auth", auth);
 app.use("/api/news", news);
+app.use("/api/footprint", footprint);
 app.get("/", (req, res) => res.send("Howdy; auth res.send"));
 
 
