@@ -51,7 +51,7 @@ app.use(flash());
 const apiRoutes = require("./routes/api-routes.js");
 app.use("/api", apiRoutes);
 // app.use("/api/auth", auth);
-app.use("/api/news", news);
+// app.use("/api/news", news);
 app.get("/", (req, res) => res.send("Howdy; auth res.send"));
 
 
