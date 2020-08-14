@@ -2,15 +2,15 @@ import axios from "axios";
 
 export default {
   ////////NEWS API////////////////////
-  getNews: function (search) {
-    const query = search;
-    return axios.get("/api/news", {
-      params: {
-        q: query,
-      },
-    });
-    // return axios.get(`/api/news`);
-  },
+  // getNews: function (search) {
+  //   const query = search;
+  //   return axios.get("/api/news", {
+  //     params: {
+  //       q: query,
+  //     },
+  //   });
+  //   // return axios.get(`/api/news`);
+  // },
 
   ////////CoolClimate API////////////////////
   getFootprint: function(inputType, input, income, householdSize) {
@@ -29,8 +29,8 @@ export default {
   },
 
   // Gets all products
-  getProduct: function () {
-    return axios.get("/api/products");
+  getProducts: function () {
+    return axios.get("/api/products/");
   },
   // Gets the product with the given id
   getProductById: function (id) {
