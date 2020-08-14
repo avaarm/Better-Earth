@@ -38,26 +38,26 @@ function FootprintCard() {
   // Set states for the footprint info, household income, household size and household zip code
   const [footprint, setFootprint] = useState([]);
   const [householdIncome, setHouseholdIncome] = useState("");
-  const [zipCode, setZipCode] = useState("");
+  const [input, setInput] = useState("");
   const [householdSize, setHouseholdSize] = useState("");
 
   // Set state for displaying the footprint history card
   const [displayResults, setDisplayResults] = useState(false);
 
   // Calls the CoolClimate API and loads the necessary data
-  function loadData(inputType, zipCode, householdIncome, householdSize) {
-    axios.get("/api/footprint/getfootprint/" + inputType + "/" + zipCode + "/" + householdIncome + "/" + householdSize).then(res => {
+  function loadData(inputType, input, householdIncome, householdSize) {
+    axios.get("/api/footprint/getfootprint/" + inputType + "/" + input + "/" + householdIncome + "/" + householdSize).then(res => {
       const jsonData = parser.parse(res.data, options);
       console.log(jsonData.response);
       setFootprint(jsonData.response);
     }
   ).catch(err => console.log(err))};
 
-  // form submit handler
+  // form submit handler - inputType = 1 stands for zip code
   function handleClickSubmit(event) {
     event.preventDefault();
     const inputType = "1";
-    loadData(inputType, zipCode, householdIncome, householdSize);
+    loadData(inputType, input, householdIncome, householdSize);
     setDisplayResults(true);
   }
 
@@ -72,8 +72,8 @@ function FootprintCard() {
   }
 
   // zip code change handler
-  function handleZipCodeChange(event) {
-    setZipCode(event.target.value);
+  function handleInputChange(event) {
+    setInput(event.target.value);
   }
 
   return (
@@ -92,7 +92,7 @@ function FootprintCard() {
             Zip Code:
           </Col>
           <Col s={7} l={7}>
-            <input placeholder="Zip Code" type="text" name="name" onChange={handleZipCodeChange}/>
+            <input placeholder="Zip Code" type="text" name="name" onChange={handleInputChange}/>
           </Col>
         </Row>
 
