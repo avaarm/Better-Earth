@@ -16,7 +16,7 @@ function News(props) {
   }, [props.search]);
 
   function loadNews(query) {
-    axios.get("/api/news/getnews/" + query)
+    axios.get("/api/getnews/" + query)
       .then((response) => {
         setNews(response.data);
       })

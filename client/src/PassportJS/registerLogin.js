@@ -20,7 +20,11 @@ function RegisterLogin() {
       // .post("/api/auth/register_login", userData)
       .post("/api/login", userData)
       .then((res) => {
-        console.log("this is the client side response: " + res);
+        console.log(res);
+        const resName = `${res.data.name}`;
+        const resId = `${res.data._id}`;
+        sessionStorage.setItem("Name", resName);
+        sessionStorage.setItem("Id", resId);
           if(res.status === 200){
           console.log("successful login");
           setLoggedIn(true);
