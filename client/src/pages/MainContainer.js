@@ -3,7 +3,6 @@ import CategorySearch from "../components/CategorySearch";
 import NewsTab from "../components/NewsAPI/newsTab";
 import FootprintCard from "../components/FootprintCard";
 import { Col, Row } from "react-materialize";
-import ProductList from "../components/ProductList";
 
 function MainContainer() {
   const [name, setName] = useState("");
