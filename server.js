@@ -4,10 +4,9 @@ const session = require("express-session")
 const MongoStore = require("connect-mongo")(session)
 const mongoose = require("mongoose");
 const passport = require("./passport/setup");
-const auth = require("./routes/auth");
-const news = require("./routes/news");
-const footprint = require("./routes/footprint");
-const routes = require("./routes");
+// const auth = require("./routes/auth");
+// const news = require("./routes/news");
+// const routes = require("./routes");
 const app = express();
 const flash = require("connect-flash");
 const cookieParser = require("cookie-parser");
@@ -49,9 +48,10 @@ app.use(passport.session());
 app.use(flash());
 
 // Routes
-app.use("/api/auth", auth);
-app.use("/api/news", news);
-app.use("/api/footprint", footprint);
+const apiRoutes = require("./routes/api-routes.js");
+app.use("/api", apiRoutes);
+// app.use("/api/auth", auth);
+// app.use("/api/news", news);
 app.get("/", (req, res) => res.send("Howdy; auth res.send"));
 
 
