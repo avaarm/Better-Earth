@@ -13,13 +13,14 @@ function FootprintHistory(props) {
         s={12}
       >
         <CardPanel className="orangeCard">
-          <span className="black-text">
+          <h2>Your footprint information</h2>
+          <blockquote className="black-text">
             <p className="zip-code">Inputted zip code: {result.input_location}</p>
-            <p className="population">Population of your zip code: {result.input_population}</p>
+            <p className="population">Population of your area: {result.input_population}</p>
             <p className="house-area">The average living space area of a house in this zip code is {result.input_footprint_housing_squarefeet} square feet.</p>
-          </span>
+          </blockquote>
           <span className="black-text">
-            <table className="responsive-table striped">
+            <table className="responsive-table striped centered">
               <thead>
                 <tr>
                   <th>Category</th>
@@ -50,12 +51,7 @@ function FootprintHistory(props) {
                 </tr>
                 <tr>
                   <td>Food</td>
-                  <td>{result.result_takeaction_low_carbon_diet_cerealscal} calories for cereal, 
-                  {result.result_takeaction_low_carbon_diet_dairycal} calories for dairy,  
-                  {result.result_takeaction_low_carbon_diet_fvcal} calories for fruits and veggies, 
-                  {result.result_takeaction_low_carbon_diet_meatcal} calories for meat, 
-                  and {result.result_takeaction_low_carbon_diet_othercal} calories for all other food options, 
-                  for a total of {result.result_takeaction_low_carbon_diet_totalcal} calories per day</td>
+                  <td>{result.result_takeaction_low_carbon_diet_cerealscal} calories for cereal, {result.result_takeaction_low_carbon_diet_dairycal} calories for dairy, {result.result_takeaction_low_carbon_diet_fvcal} calories for fruits and veggies, {result.result_takeaction_low_carbon_diet_meatcal} calories for meat, and {result.result_takeaction_low_carbon_diet_othercal} calories for all other food options, for a total of {result.result_takeaction_low_carbon_diet_totalcal} calories per day</td>
                   <td>For a low-carbon diet, eat less red meat and dairy than listed, and replace with chicken and fruits/veggies</td>
                 </tr>
               </tbody>
