@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-materialize";
 import NewsCard from "../NewsCard";
-import API from "../../utils/API";
+// import API from "../../utils/API";
 import "./style.css";
 import axios from "axios";
 
@@ -16,7 +16,7 @@ function News(props) {
   }, [props.search]);
 
   function loadNews(query) {
-    axios.get("/api/news/getnews/" + query)
+    axios.get("/api/getnews/" + query)
       .then((response) => {
         setNews(response.data);
       })
