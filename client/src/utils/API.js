@@ -12,6 +12,7 @@ export default {
     // return axios.get(`/api/news`);
   },
 
+  ////////CoolClimate API////////////////////
   getFootprint: function(inputType, input, income, householdSize) {
     const query1 = inputType;
     const query2 = input;
