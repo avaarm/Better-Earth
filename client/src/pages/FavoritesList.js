@@ -34,7 +34,7 @@ const FavoritesList = () => {
             <ListItem key={product._id}>
               <Link to={"/products/" + product._id}>
                 <strong>
-                  {product.title} by {product.author}
+                  {product.title} by {product.category}
                 </strong>
               </Link>
               <DeleteBtn onClick={() => removeFromFavorites(product._id)} />
