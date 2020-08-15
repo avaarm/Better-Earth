@@ -5,12 +5,6 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const productsController = require("../controllers/productsController");
 
-// router.post('/login', passport.authenticate('local', 
-//   (req, res, next) => {
-//       console.log("this is the server side response: " +res)
-
-//   })(req, res, next));
-
 router.post("/login", (req, res, next) => {
   passport.authenticate('local', (err, user) => {
     if (err) {
@@ -40,9 +34,9 @@ router.post("/signup", (req, res) => {
   });
 });
 
-router.get('/logout', function(req, res){
+router.post('/logout', function(req, res){
   req.logout();
-  res.json("logout")
+  res.status(200).json("logout");
 });
 
 router.get("/getnews/:query", (req, res) => {
