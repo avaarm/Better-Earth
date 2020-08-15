@@ -50,7 +50,8 @@ router.get("/getnews/:query", (req, res) => {
       .then(response => {
       res.send(response.data.articles)
       })
-      .catch(err => res.send({err}))
+      .catch(err => console.log(err))
+      // .catch(err => res.json(err))
 })
 
 // Matches with "/api/products"
