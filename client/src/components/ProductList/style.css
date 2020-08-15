@@ -1,0 +1,67 @@
+
+.container {
+    /* display: flex;
+    justify-content: center;
+    flex-direction: row;
+    float: center; */
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+
+/* .card small{
+    font-weight: bold !important;
+    padding: 10px 20px 8px !important;
+    float: top;
+    font-size: 15px !important;
+    font-family: "Helvetica";
+    margin: 0px 15px 5px 15px !important;
+    padding-top: 22px !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+
+    
+}  */
+
+
+.card-reveal {
+    background-color: #0f486f;
+
+}
+
+.summary {
+    background-color: #0f486f;
+
+}
+/* 
+.card-content{
+    padding: 40px !important;
+    font-family: "Poynter" !important;
+}
+
+
+.card-action{
+    padding: 8px 24px !important;
+}
+
+.buttonCol{
+    padding-right: 21px !important;
+}
+
+.increment{
+    float:right;
+}
+
+.card-panel{
+    background-color: #fccf43;
+}
+.tabs{
+    background-color: #0f486f;
+    font-family: "helvetica";
+        
+}
+.active{
+    color: black !important;
+    
+} */
