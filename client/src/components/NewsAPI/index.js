@@ -11,6 +11,7 @@ function News(props) {
 
   useEffect(() => {
     loadNews(props.search);
+    setNewsIndex(0);
   }, [props.search]);
 
   function loadNews(query) {
@@ -63,6 +64,13 @@ function News(props) {
             >
               More
             </button>
+          </Col>
+        </Row>
+        <Row>
+          <Col s={12} className="buttonCol">
+          <div className="increment">
+              Articles: {newsIndex} - {newsIndex + 4} of {news.length}
+            </div>
           </Col>
         </Row>
       </Col>

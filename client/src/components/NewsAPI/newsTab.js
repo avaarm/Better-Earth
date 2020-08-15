@@ -4,14 +4,14 @@ import "./style.css";
 import News from "./index";
 
 function NewsTab() {
-  const [newsSearch, setNewsSearch] = useState("climatechange");
+  const [newsSearch, setNewsSearch] = useState("sustainability");
 
   useEffect(() => {
   }, [newsSearch]);
 
   return (
     <Row>
-      <Col>
+      <div className="col s12">
         <div className="card-panel">
           <h2 className="backColor"><span><i className="material-icons prefix">library_books</i></span> Current Events  <span><i className="material-icons prefix">library_books</i></span></h2>
           
@@ -78,7 +78,7 @@ function NewsTab() {
             <News search={newsSearch} />
           </div>
         </div>
-      </Col>
+      </div>
     </Row>
   );
 }
