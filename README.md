@@ -11,12 +11,9 @@
 
 ## Description 
 
-Budget Tracker is a full-stack application that allows the user to add and subtract funds onile or offline. 
-Additionally, the application allows the user to visualize a graph of their total spendings in a day over a period of time. 
+Better Earth is a full-stack application that allows the user to find eco-firendly alternatives to everyday consumer products.
 
-This project enabled me to gain a better understadning of looking at pre-existing code and analyzing where the connections
-need to be made in order for it to make it a progressive web applciation.Through this program I learned to work in IndexedDB as well as the use of Manifest, Service Worker, and CacheAPI. 
-
+Some additional features of the project are a news and footprint history sections. This project enabled us learn about react and routing within react.
 
 ## Table of Contents
 
