@@ -16,8 +16,8 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // If no API routes are hit, send the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './client/build','index.html'));
+app.use('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build/index.html'));
 });
 
 
