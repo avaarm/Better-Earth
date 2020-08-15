@@ -5,6 +5,7 @@ import NewsTab from "./components/NewsAPI/newsTab";
 import RegisterLogin from "./PassportJS/registerLogin"
 import Register from "./PassportJS/register"
 import Nav from "./components/Nav";
+import Logout from "./PassportJS/logout";
 import About from "./components/About";
 import FootprintCard from "./components/FootprintCard";
 import { StoreProvider } from "./utils/GlobalState";
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/footprintCard" component={FootprintCard} />
           <Route exact path="/login" component={RegisterLogin} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/logout" component={Logout} />
         </StoreProvider>
         <FooterBar />
 
