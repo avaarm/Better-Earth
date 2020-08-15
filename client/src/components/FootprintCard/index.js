@@ -77,7 +77,10 @@ function FootprintCard() {
   }
 
   return (
-    <div className="container">
+    <Row>
+    <Col s={12}>
+      <div className="card-panel">
+
       <form>
         <Row>
           <Col s={12}>
@@ -209,6 +212,8 @@ function FootprintCard() {
       ):
       (<div></div>)}
     </div>
+    </Col>
+    </Row>
   );
 }
 
