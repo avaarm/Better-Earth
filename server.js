@@ -10,10 +10,16 @@ const flash = require("connect-flash");
 const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 3001;
 
+
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
+
 // If no API routes are hit, send the React app
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build','index.html'));
 });
+
 
 // Define middleware here
 app.use(express.json());
