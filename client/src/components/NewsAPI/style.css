@@ -45,9 +45,28 @@
 .tabs{
     background-color: #0f486f;
     font-family: "helvetica";
-        
 }
+.tab{
+    width:20%;
+
+}
+        
 .active{
     color: white !important;
+
     
 }
+
+@media only screen and (max-width: 800px) {
+    .active{
+        font-size:12px !important;
+        padding: 0px 5px 0px 5px !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .active{
+        font-size:6px !important;
+        padding: 0px 2px 0px 2px !important;
+    }
+}
+

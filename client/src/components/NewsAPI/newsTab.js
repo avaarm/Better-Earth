@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Tabs, Tab } from "react-materialize";
+import { Row, Col } from "react-materialize";
 import "./style.css";
 import News from "./index";
 
@@ -7,6 +7,15 @@ function NewsTab() {
   const [newsSearch, setNewsSearch] = useState("sustainability");
 
   useEffect(() => {}, [newsSearch]);
+
+  const handleInputChange = (event) => {
+    // Destructure the name and value properties off of event.target
+    // Update the appropriate state
+    console.log(event.target.className)
+    const { value } = event.target;
+    setNewsSearch(value);
+  };
+
 
   return (
     <Row>
@@ -21,64 +30,8 @@ function NewsTab() {
               <i className="material-icons prefix">library_books</i>
             </span>
           </h2>
-
-          <Row>
-            <Col s={12}>
-              <Tabs 
-              className="tab-demo z-depth-1"
-              onChange={(e) => {
-                setNewsSearch(e.target.value);
-              }}
-              >
-                <Tab
-                  active
-                  options={{
-                    duration: 300,
-                    onShow: null,
-                    responsiveThreshold: Infinity,
-                    swipeable: false,
-                  }}
-                  title="Sustainability"
-                  value="sustainability"
-                >
-                </Tab>
-                <Tab
-                 active
-                  options={{
-                    duration: 300,
-                    onShow: null,
-                    responsiveThreshold: Infinity,
-                    swipeable: false,
-                  }}
-                  title="Environment"
-                  value="environment"
-                >
-                </Tab>
-                <Tab
-                  options={{
-                    duration: 300,
-                    onShow: null,
-                    responsiveThreshold: Infinity,
-                    swipeable: false,
-                  }}
-                  title="Test 3"
-                >
-                  Test 3
-                </Tab>
-                <Tab
-                  options={{
-                    duration: 300,
-                    onShow: null,
-                    responsiveThreshold: Infinity,
-                    swipeable: false,
-                  }}
-                  title="Test 4"
-                >
-                  Test 4
-                </Tab>
-              </Tabs>
               <div>
-                <ul className="tabs tabs-fixed-width tab-demo z-depth-1">
+                <ul className="tabs">
                   <li key="1" className="tab">
                     <a
                       className="active"
@@ -138,8 +91,7 @@ function NewsTab() {
                 <br />
                 <News search={newsSearch} />
               </div>
-            </Col>
-          </Row>
+
         </div>
       </div>
     </Row>
