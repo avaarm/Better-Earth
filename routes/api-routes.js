@@ -71,6 +71,12 @@ router
   .put(productsController.update)
   .delete(productsController.remove);
 
+// Matches with "/api/products/:category"
+router
+  .route("/products/:category")
+  .get(productsController.findByCat)
+  .put(productsController.update)
+  .delete(productsController.remove);
 
 router.get("/getfootprint/:inputType/:input/:income/:householdSize", (req, res) => {
   const inputType = req.params.inputType;
