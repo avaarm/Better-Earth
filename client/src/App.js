@@ -30,7 +30,6 @@ function App() {
           <Route exact path="/logout" component={Logout} />
         </StoreProvider>
         <FooterBar />
-
       </Router>
       </div>
 
