@@ -32,14 +32,17 @@ function CategorySearch() {
       <Col s={12}>
         <CardPanel className="outerCard">
           <span className="white-text">
-            <h5 className="center">
+            <h5 className="center text">
               Looking for a sustainable alternative to everyday products?
             </h5>
             <br />
 
-            <div>Search below for our recommendations...</div>
+            
             <Row className="innerRow">
-              <Col s={10}>
+              <div className="container">
+                <Col s={1} />
+              <Col s={10} className="center">
+              <div className="text">Search below for our recommendations...</div>
                 <Select
                   s={12}
                   id="prod-type"
@@ -85,7 +88,7 @@ function CategorySearch() {
                 <Button
                   onClick={handleFormSubmit}
                   type="success"
-                  className="productButton"
+                  className="productButton subButton"
                   node="button"
                   style={{
                     marginRight: "5px",
@@ -95,25 +98,29 @@ function CategorySearch() {
                   Search
                 </Button>
               </Col>
+              <Col s={1} />
+              </div>
             </Row>
-            {!products.length ? (
-              <h1 className="text-center"></h1>
-            ) : (
-              <ProductList>
-                {products.slice(0,2).map(product => {
-                  return (
-                    <ProductListItem
-                      category={product.catgeory}
-                      key={product.productName}
-                      title={product.title}
-                      href={product.href}
-                      summary={product.summary}
-                      thumbnail={product.thumbnail}
-                    />
-                  );
-                })}
-              </ProductList>
-            )}
+            {products ? (
+              <Row>
+                <Col s={12}>
+                <ProductList>
+                    {products.slice(0,2).map(product => {
+                      return (
+                        <ProductListItem
+                          category={product.catgeory}
+                          key={product.productName}
+                          title={product.title}
+                          href={product.href}
+                          summary={product.summary}
+                          thumbnail={product.thumbnail}
+                        />
+                      );
+                    })}
+                </ProductList>
+                  </Col>
+                </Row>
+            ) : ( <div></div> )}
           </span>
         </CardPanel>
       </Col>

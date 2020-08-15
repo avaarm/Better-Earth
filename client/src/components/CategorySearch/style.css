@@ -1,5 +1,13 @@
 .outerCard {
     margin: 15px auto 0px auto;
     background-color: #fccf43;
-   padding-bottom: 540px !important; 
+}
+
+.subButton {
+    background-color:  #0f486f;
+}
+
+.text {
+    font-family: "helvetica";
+    color: #0f486f;
 }

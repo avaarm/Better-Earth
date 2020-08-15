@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import MainContainer from "./pages/MainContainer";
 import NewsTab from "./components/NewsAPI/newsTab";
 import RegisterLogin from "./PassportJS/registerLogin"
@@ -11,14 +11,12 @@ import FootprintCard from "./components/FootprintCard";
 import { StoreProvider } from "./utils/GlobalState";
 import FooterBar from "./components/FooterBar";
 import "./style.css";
-import { Col } from "react-materialize";
-import backgroundImage from "./components/Images/sky.png"
 
 // not all have to be exact paths
 function App() {
   return (
     <div className="background">
-      <Router >
+      <Router basename="/">
         <Nav />
         <StoreProvider >
           <Route exact path="/" component={MainContainer} />
