@@ -103,7 +103,7 @@ function CategorySearch() {
                 {products.slice(0,2).map(product => {
                   return (
                     <ProductListItem
-                      category={product.catgeory}
+                      category={product.category}
                       key={product.productName}
                       title={product.title}
                       href={product.href}
