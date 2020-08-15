@@ -3,10 +3,17 @@ const session = require("express-session")
 const mongoose = require("mongoose");
 const passport = require("./passport/setup");
 
+const path = require("path");
+
 const app = express();
 const flash = require("connect-flash");
 const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 3001;
+
+// If no API routes are hit, send the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build','index.html'));
+});
 
 // Define middleware here
 app.use(express.json());
