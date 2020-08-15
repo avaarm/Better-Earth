@@ -35,6 +35,10 @@
     padding-right: 21px !important;
 }
 
+.increment{
+    float:right;
+}
+
 .card-panel{
     background-color: #fccf43;
 }
