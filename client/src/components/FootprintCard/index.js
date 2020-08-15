@@ -95,7 +95,7 @@ function FootprintCard() {
             Zip Code:
           </Col>
           <Col s={7} l={7}>
-            <input placeholder="Zip Code" type="text" name="name" onChange={handleInputChange}/>
+            <input placeholder="  Zip Code" type="text" name="name" onChange={handleInputChange}/>
           </Col>
         </Row>
 

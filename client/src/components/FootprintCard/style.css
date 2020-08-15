@@ -18,3 +18,8 @@
 .subButton{
     margin: 10px 10px;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
