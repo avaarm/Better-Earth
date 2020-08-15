@@ -15,8 +15,8 @@ import { Col } from "react-materialize";
 // not all have to be exact paths
 function App() {
   return (
+    <div className="background">
       <Router >
-
         <Nav />
         <StoreProvider >
           <Route exact path="/" component={MainContainer} />
@@ -29,6 +29,7 @@ function App() {
         <FooterBar />
 
       </Router>
+      </div>
 
   );
 }
