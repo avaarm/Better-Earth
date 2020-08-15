@@ -85,7 +85,7 @@ function FootprintCard() {
         <Row>
           <Col s={12}>
             <div >
-              <h4 className="middle">Calculate your carbon footprint</h4>
+              <h2 className="middle">Calculate your carbon footprint</h2>
             </div>
           </Col>
         </Row>
@@ -196,6 +196,7 @@ function FootprintCard() {
           <Col s={5} m={5} l={5} />
           <Col s={7} m={7} l={7} >
             <Button 
+              className="subButton"
               node="button" 
               type="submit" 
               waves="light" 
