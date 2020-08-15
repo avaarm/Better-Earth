@@ -11,6 +11,7 @@ import { StoreProvider } from "./utils/GlobalState";
 import FooterBar from "./components/FooterBar";
 import "./style.css";
 import { Col } from "react-materialize";
+import backgroundImage from "./components/Images/sky.png"
 
 // not all have to be exact paths
 function App() {
