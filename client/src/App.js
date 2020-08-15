@@ -10,12 +10,13 @@ import FootprintCard from "./components/FootprintCard";
 import { StoreProvider } from "./utils/GlobalState";
 import FooterBar from "./components/FooterBar";
 import "./style.css";
+import { Col } from "react-materialize";
 
 // not all have to be exact paths
 function App() {
   return (
-    <div className="background">
       <Router >
+
         <Nav />
         <StoreProvider >
           <Route exact path="/" component={MainContainer} />
@@ -26,8 +27,8 @@ function App() {
           <Route exact path="/register" component={Register} />
         </StoreProvider>
         <FooterBar />
+
       </Router>
-    </div>
 
   );
 }
