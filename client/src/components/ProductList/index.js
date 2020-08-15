@@ -24,7 +24,6 @@ function ProductListItem({
     <div>
 
     <div className="container">
-     
       <div className="col s12 m8 l6">
         <div className="card"><a rel="noopener noreferrer" target="_blank">{category}</a>
           <div className="card-image waves-effect waves-block waves-light">
@@ -53,7 +52,8 @@ function ProductListItem({
           </div>
         </div>
       </div>
-    </div></div>
+    </div>
+    </div>
 
   );
 }
