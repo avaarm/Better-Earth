@@ -3,7 +3,8 @@ const session = require("express-session")
 const mongoose = require("mongoose");
 const passport = require("./passport/setup");
 
-// const path = require("path");
+const path = require("path");
+require("dotenv").config();
 
 const app = express();
 const flash = require("connect-flash");
@@ -11,11 +12,7 @@ const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 3001;
 
 
-// app.use(express.static(path.join(__dirname, './client/build')));
-// -app.get('/', function (req, res) {
-// +app.get('/*', function (req, res) {
-//    res.sendFile(path.join(__dirname, './client/build', 'index.html'));
-//  });
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 
 // Define middleware here
@@ -54,10 +51,10 @@ app.use(flash());
 // Routes
 const apiRoutes = require("./routes/api-routes.js");
 app.use("/api", apiRoutes);
-app.get("/", (req, res) => res.send("Howdy; auth res.send"));
+// app.get("/", (req, res) => res.send("Howdy; auth res.send"));
 
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, './client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 // Start the API server
