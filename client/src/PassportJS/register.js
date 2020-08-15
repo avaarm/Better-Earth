@@ -65,6 +65,7 @@ function Register() {
                 <div className="row">
                   <div className="col s1 m3 l3"></div>
                   <div className="input-field col s10 m6 m6">
+                  <i className="material-icons prefix">person</i>
                     <input
                       id="name"
                       type="text"
@@ -81,6 +82,7 @@ function Register() {
                 <div className="row">
                   <div className="col s1 m3 l3"></div>
                   <div className="input-field col s10 m6 m6">
+                  <i className="material-icons prefix">email</i>
                     <input
                       id="email"
                       type="email"
@@ -96,6 +98,7 @@ function Register() {
                 <div className="row">
                   <div className="col s1 m3 l3"></div>
                   <div className="input-field col s10 m6 m6">
+                  <i className="material-icons prefix">work</i>
                     <input
                       id="password"
                       type="password"
