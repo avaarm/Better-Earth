@@ -43,12 +43,12 @@ function FootprintCard() {
 
   // Set state for displaying the footprint history card
   const [displayResults, setDisplayResults] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
 
   // Calls the CoolClimate API and loads the necessary data
   function loadData(inputType, input, householdIncome, householdSize) {
     axios.get("/api/getfootprint/" + inputType + "/" + input + "/" + householdIncome + "/" + householdSize).then(res => {
       const jsonData = parser.parse(res.data, options);
-      console.log(jsonData.response);
       setFootprint(jsonData.response);
     }
   ).catch(err => console.log(err))};
@@ -57,8 +57,14 @@ function FootprintCard() {
   function handleClickSubmit(event) {
     event.preventDefault();
     const inputType = "1";
-    loadData(inputType, input, householdIncome, householdSize);
-    setDisplayResults(true);
+    if (input && householdIncome && householdSize) {
+      loadData(inputType, input, householdIncome, householdSize);
+      setErrorMessage(false);      
+      setDisplayResults(true);
+    } else {
+      setErrorMessage(true);
+      setDisplayResults(false);
+    }
   }
 
   // income change handler
@@ -77,12 +83,15 @@ function FootprintCard() {
   }
 
   return (
-    <div className="container">
+    <Row>
+    <Col s={12}>
+      <div className="card-panel">
+
       <form>
         <Row>
           <Col s={12}>
             <div >
-              <h4 className="middle">Calculate your carbon footprint</h4>
+              <h2 className="middle">Calculate your carbon footprint</h2>
             </div>
           </Col>
         </Row>
@@ -92,7 +101,11 @@ function FootprintCard() {
             Zip Code:
           </Col>
           <Col s={7} l={7}>
-            <input placeholder="Zip Code" type="text" name="name" onChange={handleInputChange}/>
+            <input 
+              placeholder="Zip Code" 
+              type="text" 
+              name="name"
+              onChange={handleInputChange}/>
           </Col>
         </Row>
 
@@ -193,6 +206,7 @@ function FootprintCard() {
           <Col s={5} m={5} l={5} />
           <Col s={7} m={7} l={7} >
             <Button 
+              className={input && householdIncome && householdSize ? ("subButton pulse") : ("subButton")}
               node="button" 
               type="submit" 
               waves="light" 
@@ -208,7 +222,13 @@ function FootprintCard() {
         <FootprintHistory data={footprint}/>
       ):
       (<div></div>)}
+      {errorMessage ? (
+        <p className="errorMess pulse">All fields are required!</p>
+      ):
+      (<div></div>)}
     </div>
+    </Col>
+    </Row>
   );
 }
 

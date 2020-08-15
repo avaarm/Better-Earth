@@ -1,12 +1,8 @@
-const axios = require("axios")
 const express = require("express");
 const session = require("express-session")
-const MongoStore = require("connect-mongo")(session)
 const mongoose = require("mongoose");
 const passport = require("./passport/setup");
-// const auth = require("./routes/auth");
-// const news = require("./routes/news");
-// const routes = require("./routes");
+
 const app = express();
 const flash = require("connect-flash");
 const cookieParser = require("cookie-parser");
@@ -29,8 +25,6 @@ useCreateIndex: true,
 .then(console.log("MongoDB connected"))
 .catch(err => console.log(err));
 
-
-// app.use(require("morgan")("combined"));
 app.use(cookieParser());
 // Express Session
 app.use(
@@ -38,7 +32,7 @@ app.use(
       secret: "purplemonkeydishwasher",
       resave: true,
       saveUninitialized: true,
-      // store: new MongoStore({ mongooseConnection: mongoose.connection })
+
     })
 );
 
@@ -50,11 +44,7 @@ app.use(flash());
 // Routes
 const apiRoutes = require("./routes/api-routes.js");
 app.use("/api", apiRoutes);
-// app.use("/api/auth", auth);
-// app.use("/api/news", news);
 app.get("/", (req, res) => res.send("Howdy; auth res.send"));
-
-// app.use(routes);
 
 // Start the API server
 app.listen(PORT, function() {

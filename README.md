@@ -50,6 +50,10 @@ need to be made in order for it to make it a progressive web applciation.Through
 
 ## Demonstration 
 
+### About Us
+![Application Gif](https://media.giphy.com/media/S98UevhF3irXh5Hadv/giphy.gif)
+
+### About Us
 <!-- ![Application Demo](./public/assets/video.gif) -->
 
 
