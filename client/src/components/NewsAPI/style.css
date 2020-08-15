@@ -35,13 +35,17 @@
     padding-right: 21px !important;
 }
 
+.increment{
+    float:right;
+}
+
 .card-panel{
     background-color: #fccf43;
 }
 .tabs{
     background-color: #0f486f;
     font-family: "helvetica";
-    
+        
 }
 .active{
     color: white !important;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Icon, NavItem } from "react-materialize";
+import { Navbar, Icon, NavItem, Col } from "react-materialize";
 import "./style.css";
 import waves from "./waves.svg";
 
