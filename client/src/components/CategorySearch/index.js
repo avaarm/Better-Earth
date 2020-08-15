@@ -20,7 +20,7 @@ function CategorySearch() {
     // When the form is submitted, prevent its default behavior, get products update the products state
     event.preventDefault();
     API.getProducts(productSearch)
-      .then((res) => setProducts(res.data))
+
       .catch((err) => console.log(err));
   };
 
@@ -97,7 +97,7 @@ function CategorySearch() {
               <h1 className="text-center">No Products to Display</h1>
             ) : (
               <ProductList>
-                {products.slice(0, 4).map(product => {
+                {products.slice(0,2).map(product => {
                   return (
                     <ProductListItem
                       category={product.catgeory}
