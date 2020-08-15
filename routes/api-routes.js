@@ -5,6 +5,7 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const productsController = require("../controllers/productsController");
 
+
 router.post("/login", (req, res, next) => {
   passport.authenticate('local', (err, user) => {
     if (err) {
