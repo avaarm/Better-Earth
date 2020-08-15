@@ -222,7 +222,7 @@ function FootprintCard() {
       ):
       (<div></div>)}
       {errorMessage ? (
-        <p className="errorMess">All fields are required!</p>
+        <p className="errorMess pulse">All fields are required!</p>
       ):
       (<div></div>)}
     </div>
