@@ -205,7 +205,7 @@ function FootprintCard() {
           <Col s={5} m={5} l={5} />
           <Col s={7} m={7} l={7} >
             <Button 
-              className={input && householdIncome && householdSize ? ("subButton pulse"): ("subButton")}
+              className={input && householdIncome && householdSize ? ("subButton pulse") : ("subButton")}
               node="button" 
               type="submit" 
               waves="light" 
