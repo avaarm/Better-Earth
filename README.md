@@ -44,6 +44,7 @@ need to be made in order for it to make it a progressive web applciation.Through
 * [Mongoose](https://mongoosejs.com/)
 * Heroku
 * Express 
+* React Materliaze
 
 ## Application 
 
@@ -119,7 +120,7 @@ IndexedDB is a low-level API for client-side storage of significant amounts of s
     * test files already provided
     * skeleton of html files already provided
     * htmlRenderer.js already provided
-* [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+
 
 
 ## Questions 
