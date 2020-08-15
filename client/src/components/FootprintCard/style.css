@@ -27,3 +27,10 @@
     color: black;
     opacity: 1; /* Firefox */
   }
+
+.errorMess {
+    text-align: center;
+    font-size: 30px;
+    font-family: "cooper";
+    color: red;
+}
