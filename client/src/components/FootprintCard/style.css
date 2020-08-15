@@ -13,10 +13,14 @@
 
 .middle{
     text-align: center;  
+    font-family: "cooper black";
+    color: #0f486f;
+
 }
 
 .subButton{
-    margin: 10px 10px;
+    /* margin: 10px 10px; */
+    background-color: #0f486f;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
