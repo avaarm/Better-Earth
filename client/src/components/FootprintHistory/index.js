@@ -11,7 +11,7 @@ function FootprintHistory(props) {
         m={12}
         s={12}
       >
-        <CardPanel className="orangeCard">
+        <CardPanel className="orangeCard z-depth-3">
           <h3 className="center font">Your Footprint Information</h3>
           <blockquote className="black-text">
             <p className="zip-code">Inputted zip code: {result.input_location}</p>
@@ -19,7 +19,7 @@ function FootprintHistory(props) {
             <p className="house-area">The average living space area of a house in this zip code is {result.input_footprint_housing_squarefeet} square feet.</p>
           </blockquote>
           <span className="black-text">
-            <table className="responsive-table striped centered">
+            <table className="table striped centered z-depth-5">
               <thead>
                 <tr>
                   <th>Category</th>
@@ -35,7 +35,7 @@ function FootprintHistory(props) {
                 </tr>
                 <tr>
                   <td>Transportation</td>
-                  <td>${Math.round(result.input_footprint_transportation_publictrans)} mi/yr on public transit,  {Math.round(result.input_footprint_transportation_airtotal)} mi/yr on air travel</td>
+                  <td>{Math.round(result.input_footprint_transportation_publictrans)} mi/yr on public transit,  {Math.round(result.input_footprint_transportation_airtotal)} mi/yr on air travel</td>
                   <td>Carpool to work {result.input_takeaction_carpool_to_work_days} days per month, ride your bike for {result.input_takeaction_ride_my_bike_miles} miles per week, or telecommute to work {result.input_takeaction_telecommute_to_work_days} days per month</td>
                 </tr>
                 <tr>
