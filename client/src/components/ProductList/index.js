@@ -1,5 +1,4 @@
 import React from "react";
-import Thumbnail from "../Thumbnail";
 import { Container, Row, Col, CardTitle, Card, Icon } from "react-materialize";
 
 // Exporting both ProductList and ProductListItem from this file
