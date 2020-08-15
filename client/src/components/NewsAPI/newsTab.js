@@ -8,15 +8,6 @@ function NewsTab() {
 
   useEffect(() => {}, [newsSearch]);
 
-  const handleInputChange = (event) => {
-    // Destructure the name and value properties off of event.target
-    // Update the appropriate state
-    console.log(event.target.className)
-    const { value } = event.target;
-    setNewsSearch(value);
-  };
-
-
   return (
     <Row>
       <div className="col s12">
