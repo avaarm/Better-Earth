@@ -21,6 +21,7 @@ function ProductListItem({
   href,
 }) {
   return (
+
     <div>
 
     <div className="container">
@@ -49,10 +50,11 @@ function ProductListItem({
               <i className="material-icons right">close</i>
             </span>
             <p className="summary">{summary}</p>
-          </div>
+        </div>
         </div>
       </div>
     </div>
+
     </div>
 
   );

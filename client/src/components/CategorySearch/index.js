@@ -101,6 +101,7 @@ function CategorySearch() {
               <Col s={1} />
               </div>
             </Row>
+
             {products ? (
               <Row>
                 <Col s={12}>
@@ -121,6 +122,7 @@ function CategorySearch() {
                   </Col>
                 </Row>
             ) : ( <div></div> )}
+
           </span>
         </CardPanel>
       </Col>

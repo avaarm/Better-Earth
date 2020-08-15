@@ -58,11 +58,12 @@ function FootprintCard() {
     event.preventDefault();
     const inputType = "1";
     if (input && householdIncome && householdSize) {
-      setErrorMessage(false);
       loadData(inputType, input, householdIncome, householdSize);
+      setErrorMessage(false);      
       setDisplayResults(true);
     } else {
       setErrorMessage(true);
+      setDisplayResults(false);
     }
   }
 
