@@ -83,7 +83,7 @@ function RegisterLogin() {
                       setPassword(e.target.value);
                     }}
                   />
-                  <label htmlFor="passwordLogin">Password</label>
+                  <label htmlFor="passwordLogin white">Password</label>
                 </div>
                 <div className="col s1 m3 l3"></div>
               </div>
