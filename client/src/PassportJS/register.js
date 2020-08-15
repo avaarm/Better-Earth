@@ -9,13 +9,6 @@ function Register() {
   const [password, setPassword] = useState("");
   const [registered, setRegistered] = useState(false);
 
-  const logout = (event) => {
-    event.preventDefault();
-    axios.get("/api/auth/logout", function (req, res) {
-      console.log("this");
-    });
-  };
-
   const onSubmit = (event) => {
     event.preventDefault();
     sessionStorage.removeItem("Name");

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col } from "react-materialize";
+import { Row } from "react-materialize";
 import "./style.css";
 import News from "./index";
 

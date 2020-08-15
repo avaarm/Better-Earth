@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Icon, NavItem, Col } from "react-materialize";
+import { Navbar, Icon, NavItem, } from "react-materialize";
 import "./style.css";
 import waves from "./waves.svg";
 
@@ -9,18 +9,16 @@ function Nav(props) {
   // Trying to set state with loggedIn or not soas to hide "register" and "login" or display the user's name and "logout"
   ////////////////////////////////////////////
   const [name, setName] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
+  // const [loggedIn, setLoggedIn] = useState(false);
   const sessionName = sessionStorage.getItem("Name");
 
   useEffect(() => {
     setName(sessionName);
-    // console.log("name: " + name)
-    // console.log("loggedIn: " + loggedIn)
     if (name) {
-      setLoggedIn(true);
+      // setLoggedIn(true);
     }
   }, [sessionName]);
-  ///////////////////////////////////////////////
+
   return (
     <div>
       <Navbar
