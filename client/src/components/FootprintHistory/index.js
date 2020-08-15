@@ -12,7 +12,7 @@ function FootprintHistory(props) {
         s={12}
       >
         <CardPanel className="orangeCard">
-          <h2>Your footprint information</h2>
+          <h3 className="center font">Your Footprint Information</h3>
           <blockquote className="black-text">
             <p className="zip-code">Inputted zip code: {result.input_location}</p>
             <p className="population">Population of your area: {result.input_population}</p>
