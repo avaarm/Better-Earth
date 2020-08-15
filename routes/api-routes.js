@@ -50,7 +50,7 @@ router.get("/getnews/:query", (req, res) => {
   const APIKEY_NEWS = process.env.REACT_APP_APIKEY_NEWS;
   axios
     .get(
-        `https://newsapi.org/v2/everything?q=${query}&apiKey=${APIKEY_NEWS}&language=en&from=2020-08-01&sortBy=relevancy,publishedAt&url=true&excludeDomains=seekingalpha.com,freerepublic.com,business2community.com`
+        `https://newsapi.org/v2/everything?q=${query}&apiKey=${APIKEY_NEWS}&language=en&from=2020-08-01&sortBy=relevancy,publishedAt&pageSize=100&url=true&excludeDomains=seekingalpha.com,freerepublic.com,business2community.com`
       )
       .then(response => {
       res.send(response.data.articles)
@@ -64,14 +64,6 @@ router.get("/getnews/:query", (req, res) => {
   .get(productsController.findAll)
   .post(productsController.create);
 
-// router.get("/products", (req, res) => {
-//   productsController.findAll
-// })
-
-// router.post("/products", (req, res) => {
-//   productsController.create
-// })
-
 // Matches with "/api/products/:id"
 router
   .route("/products:id")
@@ -79,17 +71,6 @@ router
   .put(productsController.update)
   .delete(productsController.remove);
 
-// router.get("/products/:id", (req, res) => {
-//   productsController.findById
-// })
-
-// router.put("/products/:id", (req, res) => {
-//   productsController.update
-// })
-
-// router.delete("/products/:id", (req, res) => {
-//   productsController.remove
-// })
 
 router.get("/getfootprint/:inputType/:input/:income/:householdSize", (req, res) => {
   const inputType = req.params.inputType;
