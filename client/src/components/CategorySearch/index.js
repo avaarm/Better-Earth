@@ -72,7 +72,7 @@ function CategorySearch() {
                   <option value="Bathroom">Bathroom</option>
                   <option value="Clothing">Clothing</option>
                   <option value="Shoes">Shoes</option>
-                  <option value="General House Goods">General House Goods</option>
+                  <option value="General House">General House Goods</option>
                   <option value="Kitchen">Kitchen</option>
                   <option value="Storage">Storage</option>
                   <option value="Outdoor Gear">Outdoor Gear</option>
@@ -97,7 +97,7 @@ function CategorySearch() {
               </Col>
             </Row>
             {!products.length ? (
-              <h1 className="text-center">No Products to Display</h1>
+              <h1 className="text-center"></h1>
             ) : (
               <ProductList>
                 {products.slice(0,2).map(product => {
