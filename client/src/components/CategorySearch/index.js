@@ -19,9 +19,12 @@ function CategorySearch() {
   const handleFormSubmit = (event) => {
     // When the form is submitted, prevent its default behavior, get products update the products state
     event.preventDefault();
-    API.getProducts(productSearch)
+
+    console.log(productSearch);
+    API.getProductsByCategory(productSearch)
       .then((res) => setProducts(res.data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+
   };
 
   return (
@@ -65,15 +68,15 @@ function CategorySearch() {
                   onChange={handleInputChange}
                 >
                   <option disabled value=""></option>
-                  <option value="1">Accessories</option>
-                  <option value="2">Bathroom</option>
-                  <option value="3">Clothing</option>
-                  <option value="4">Shoes</option>
-                  <option value="5">General House Goods</option>
-                  <option value="6">Kitchen</option>
-                  <option value="7">Storage</option>
-                  <option value="8">Outdoor Gear</option>
-                  <option value="9">Other</option>
+                  <option value="Accessories">Accessories</option>
+                  <option value="Bathroom">Bathroom</option>
+                  <option value="Clothing">Clothing</option>
+                  <option value="Shoes">Shoes</option>
+                  <option value="General House">General House Goods</option>
+                  <option value="Kitchen">Kitchen</option>
+                  <option value="Storage">Storage</option>
+                  <option value="Outdoor Gear">Outdoor Gear</option>
+                  <option value="Other">Other</option>
                 </Select>
 
                 <CardPanel className="innerCard">
@@ -94,13 +97,13 @@ function CategorySearch() {
               </Col>
             </Row>
             {!products.length ? (
-              <h1 className="text-center">No Products to Display</h1>
+              <h1 className="text-center"></h1>
             ) : (
               <ProductList>
-                {products.slice(0, 4).map(product => {
+                {products.slice(0,2).map(product => {
                   return (
                     <ProductListItem
-                      category={product.catgeory}
+                      category={product.category}
                       key={product.productName}
                       title={product.title}
                       href={product.href}

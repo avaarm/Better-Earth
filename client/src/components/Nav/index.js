@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Icon, NavItem } from "react-materialize";
+import { Navbar, Icon, NavItem, Col } from "react-materialize";
 import "./style.css";
 import waves from "./waves.svg";
 
@@ -49,16 +49,9 @@ function Nav(props) {
         <NavItem href="/footprintCard">MyFootprint</NavItem>
         <NavItem href="/news">News</NavItem>
         <NavItem href="/about">About</NavItem>
-        {loggedIn ? (
-          <NavItem href="/login">Logout</NavItem>
-        ) : (
-          <NavItem href="/login">Login</NavItem>
-        )}
-        {loggedIn ? (
-          <NavItem>{name}</NavItem>
-        ) : (
-          <NavItem href="/register">Register</NavItem>
-        )}
+        <NavItem href="/register">Register</NavItem>
+        <NavItem href="/login">Login</NavItem>
+        <NavItem href="/logout">Logout</NavItem>
       </Navbar>
       <div>
         <img className="waves" alt="waves" src={waves} />

@@ -5,12 +5,6 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const productsController = require("../controllers/productsController");
 
-// router.post('/login', passport.authenticate('local', 
-//   (req, res, next) => {
-//       console.log("this is the server side response: " +res)
-
-//   })(req, res, next));
-
 router.post("/login", (req, res, next) => {
   passport.authenticate('local', (err, user) => {
     if (err) {
@@ -40,9 +34,9 @@ router.post("/signup", (req, res) => {
   });
 });
 
-router.get('/logout', function(req, res){
+router.post('/logout', function(req, res){
   req.logout();
-  res.json("logout")
+  res.status(200).json("logout");
 });
 
 router.get("/getnews/:query", (req, res) => {
@@ -50,7 +44,7 @@ router.get("/getnews/:query", (req, res) => {
   const APIKEY_NEWS = process.env.REACT_APP_APIKEY_NEWS;
   axios
     .get(
-        `https://newsapi.org/v2/everything?q=${query}&apiKey=${APIKEY_NEWS}&language=en&from=2020-08-01&sortBy=relevancy,publishedAt&url=true&excludeDomains=seekingalpha.com,freerepublic.com,business2community.com`
+        `https://newsapi.org/v2/everything?q=${query}&apiKey=${APIKEY_NEWS}&language=en&from=2020-08-01&sortBy=relevancy,publishedAt&pageSize=100&url=true&excludeDomains=seekingalpha.com,freerepublic.com,business2community.com`
       )
       .then(response => {
       res.send(response.data.articles)
@@ -64,14 +58,6 @@ router.get("/getnews/:query", (req, res) => {
   .get(productsController.findAll)
   .post(productsController.create);
 
-// router.get("/products", (req, res) => {
-//   productsController.findAll
-// })
-
-// router.post("/products", (req, res) => {
-//   productsController.create
-// })
-
 // Matches with "/api/products/:id"
 router
   .route("/products:id")
@@ -79,17 +65,12 @@ router
   .put(productsController.update)
   .delete(productsController.remove);
 
-// router.get("/products/:id", (req, res) => {
-//   productsController.findById
-// })
-
-// router.put("/products/:id", (req, res) => {
-//   productsController.update
-// })
-
-// router.delete("/products/:id", (req, res) => {
-//   productsController.remove
-// })
+// Matches with "/api/products/:category"
+router
+  .route("/products/:category")
+  .get(productsController.findByCat)
+  .put(productsController.update)
+  .delete(productsController.remove);
 
 router.get("/getfootprint/:inputType/:input/:income/:householdSize", (req, res) => {
   const inputType = req.params.inputType;
