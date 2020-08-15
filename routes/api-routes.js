@@ -8,8 +8,8 @@ const productsController = require("../controllers/productsController");
 const path = require("path");
 
 // If no API routes are hit, send the React app
-router.get(function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+router.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 router.post("/login", (req, res, next) => {
