@@ -11,11 +11,11 @@ const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 3001;
 
 
-app.use(express.static(path.join(__dirname, './client/build')));
--app.get('/', function (req, res) {
-+app.get('/*', function (req, res) {
-   res.sendFile(path.join(__dirname, './client/build', 'index.html'));
- });
+// app.use(express.static(path.join(__dirname, './client/build')));
+// -app.get('/', function (req, res) {
+// +app.get('/*', function (req, res) {
+//    res.sendFile(path.join(__dirname, './client/build', 'index.html'));
+//  });
 
 //hello
 // Define middleware here
