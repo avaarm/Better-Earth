@@ -21,7 +21,6 @@ function RegisterLogin() {
       // .post("/api/auth/register_login", userData)
       .post("/api/login", userData)
       .then((res) => {
-        console.log(res);
         const resName = `${res.data.name}`;
         const resId = `${res.data._id}`;
         sessionStorage.setItem("Name", resName);
