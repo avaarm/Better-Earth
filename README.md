@@ -1,6 +1,6 @@
 
 
-# [project-3](https://polar-ocean-72761.herokuapp.com/)
+# [Better Earth](https://sheltered-sea-24671.herokuapp.com/)
 
 
 [![GitHub License](https://img.shields.io/badge/License-orange.svg)](Develop/License/MIT.md)
@@ -46,7 +46,7 @@ need to be made in order for it to make it a progressive web applciation.Through
 
 ## Application 
 
-![Finished Product](./public/images/image.png)
+![Finished Product](./finishedApp.png)
 
 ## Demonstration 
 
